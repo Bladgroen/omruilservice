@@ -1,4 +1,19 @@
 <?php
-$basePath = __DIR__ . '/../';
+require_once __DIR__ . '/../vendor/autoload.php';
 
-require_once $basePath . 'resources/templates/pages/index.php';
+$loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/../resources/templates');
+$twig = new \Twig\Environment($loader);
+
+// General variables
+$basePath = __DIR__ . '/../';
+$boolean = '';
+
+
+if ($_SERVER['QUERY_STRING'] == "login") {
+    header('Location: /login.php');
+}
+
+
+echo $twig->render('pages/index.twig', [
+
+]);

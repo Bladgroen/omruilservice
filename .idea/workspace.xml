@@ -19,17 +19,48 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51a4b540-9d8f-4f60-80f0-fb1a5905826b" name="Default Changelist" comment="nieuwe structuur en toevoegen van docker" />
+    <list default="true" id="51a4b540-9d8f-4f60-80f0-fb1a5905826b" name="Default Changelist" comment="nieuwe structuur en toevoegen van docker">
+      <change afterPath="$PROJECT_DIR$/app/public/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/public/signup.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/templates/layout/parts/sidebar.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/templates/pages/index.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/templates/pages/signup.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/templates/pages/topEvenementen.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/omruilservice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/omruilservice.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/public/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/templates/pages/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/templates/pages/login.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/ib_logfile0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/ibdata1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/ibtmp1" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/ibtmp1" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/app/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/app/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/app/vendor/composer" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-ctype" />
+    </include_path>
   </component>
   <component name="ProjectId" id="1js1Zhwzj4suC16KrPBUR5c9KNM" />
   <component name="ProjectViewState">
@@ -39,7 +70,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../odisee-helpdesk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -57,7 +89,8 @@
       <option name="presentableId" value="Default" />
       <updated>1604578042999</updated>
       <workItem from="1604578044403" duration="2042000" />
-      <workItem from="1604663289977" duration="4921000" />
+      <workItem from="1604663289977" duration="7205000" />
+      <workItem from="1604750152342" duration="8126000" />
     </task>
     <task id="LOCAL-00001" summary="nieuwe structuur en toevoegen van docker">
       <created>1604671051169</created>
@@ -80,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604676163990</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="nieuwe structuur en toevoegen van docker">
+      <created>1604676691757</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604676691757</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,13 +147,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604663932800" />
-    <state x="794" y="439" key="NewPhpFileDialog" timestamp="1604664306462">
+    <state x="794" y="439" key="NewPhpFileDialog" timestamp="1604757830322">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="439" key="NewPhpFileDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604664306462" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1604676173140">
+    <state x="794" y="439" key="NewPhpFileDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604757830322" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1604676718970">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604676173140" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604676718970" />
   </component>
 </project>
