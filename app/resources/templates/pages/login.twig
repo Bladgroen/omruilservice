@@ -28,12 +28,20 @@
                 <h2><a href="#">Log in</a></h2>
 
             </header>
-            <h3>Gebruikersnaam</h3>
-            <input type="text" id="gebruikersnaam">
-            <h3>Wachtwoord</h3>
-            <input type="text" id="wachtwoord">
-            <button id="button" style="display: flex; margin-top: 10px;">Log in</button>
-            <p>Nog geen account? <a href="?signup">Sign up!</a></p>
+            <form id="loginform" method="post">
+                <h3>Gebruikersnaam</h3>
+                <input type="text" id="gebruikersnaam" name="gebruikersnaam" placeholder="Gebruikersnaam"
+                       value="{{ gebruikersnaam }}">
+                <span>{{ errorGebruikersnaam }}</span>
+                <h3>Wachtwoord</h3>
+                <input type="text" id="wachtwoord" name="wachtwoord" placeholder="Wachtwoord"
+                       value="{{ wachtwoord }}">
+                <span>{{ errorWachtwoord }}</span>
+                <input type="hidden" name="moduleAction" value="processName">
+                <input type="submit" id="button" style="display: flex; margin-top: 10px;" value="Log in">
+                <p>Nog geen account? <a href="signup.php">Sign up!</a></p>
+            </form>
+
         </article>
 
         <!-- Post -->

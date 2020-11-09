@@ -19,18 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51a4b540-9d8f-4f60-80f0-fb1a5905826b" name="Default Changelist" comment="nieuwe structuur en toevoegen van docker">
-      <change afterPath="$PROJECT_DIR$/app/public/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/public/signup.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/resources/templates/layout/parts/sidebar.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/resources/templates/pages/index.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/resources/templates/pages/signup.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/resources/templates/pages/topEvenementen.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/omruilservice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/omruilservice.iml" afterDir="false" />
+    <list default="true" id="51a4b540-9d8f-4f60-80f0-fb1a5905826b" name="Default Changelist" comment="toevoeging login en singup pagina">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/public/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/templates/pages/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/templates/pages/login.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/public/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/public/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/templates/pages/index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/templates/pages/index.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/templates/pages/login.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/templates/pages/login.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/ib_buffer_pool" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysql-data/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/ib_logfile0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysql-data/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/ibdata1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysql-data/ibtmp1" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/ibtmp1" afterDir="false" />
@@ -40,7 +36,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/app/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -90,7 +86,8 @@
       <updated>1604578042999</updated>
       <workItem from="1604578044403" duration="2042000" />
       <workItem from="1604663289977" duration="7205000" />
-      <workItem from="1604750152342" duration="8126000" />
+      <workItem from="1604750152342" duration="8223000" />
+      <workItem from="1604924654544" duration="6457000" />
     </task>
     <task id="LOCAL-00001" summary="nieuwe structuur en toevoegen van docker">
       <created>1604671051169</created>
@@ -120,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604676691757</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="toevoeging login en singup pagina">
+      <created>1604758885439</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1604758885439</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,7 +144,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="nieuwe structuur en toevoegen van docker" />
-    <option name="LAST_COMMIT_MESSAGE" value="nieuwe structuur en toevoegen van docker" />
+    <MESSAGE value="toevoeging login en singup pagina" />
+    <option name="LAST_COMMIT_MESSAGE" value="toevoeging login en singup pagina" />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1604663932800">
@@ -151,9 +156,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="439" key="NewPhpFileDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604757830322" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1604676718970">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1604758895717">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604676718970" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604758895717" />
   </component>
 </project>

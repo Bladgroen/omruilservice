@@ -9,9 +9,7 @@ $basePath = __DIR__ . '/../';
 $boolean = '';
 
 
-if ($_SERVER['QUERY_STRING'] == "login") {
-    header('Location: /login.php');
-}
+
 
 
 echo $twig->render('pages/index.twig', [

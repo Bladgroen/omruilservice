@@ -107,6 +107,10 @@ html {
     box-sizing: inherit;
 }
 
+form#loginform input[type=text]{
+    width: 30%;
+}
+
 body {
     background-color: #e8e8e8;
     background-image: url("images/bg02.png");
@@ -189,8 +193,6 @@ br.clear {
 p, ul, ol, dl {
     margin-bottom: 1em;
 }
-
-
 
 
 /* Row */
