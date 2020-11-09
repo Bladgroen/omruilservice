@@ -107,7 +107,11 @@ html {
     box-sizing: inherit;
 }
 
-form#loginform input[type=text]{
+form#loginform input[type=text] {
+    width: 30%;
+}
+
+form#signupform input[type=text] {
     width: 30%;
 }
 
@@ -192,6 +196,12 @@ br.clear {
 
 p, ul, ol, dl {
     margin-bottom: 1em;
+}
+
+
+input#button {
+    display: flex;
+    margin-top: 10px;
 }
 
 

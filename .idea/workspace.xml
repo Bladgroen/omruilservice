@@ -19,17 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51a4b540-9d8f-4f60-80f0-fb1a5905826b" name="Default Changelist" comment="toevoeging login en singup pagina">
+    <list default="true" id="51a4b540-9d8f-4f60-80f0-fb1a5905826b" name="Default Changelist" comment="formchecking &amp; persistentie loginform">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/public/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/public/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/templates/pages/index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/templates/pages/index.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/public/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/public/signup.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/resources/templates/pages/login.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/templates/pages/login.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql-data/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/ib_buffer_pool" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql-data/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/ib_logfile0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql-data/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/ibdata1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql-data/ibtmp1" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/ibtmp1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/templates/pages/signup.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/templates/pages/signup.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +82,7 @@
       <workItem from="1604578044403" duration="2042000" />
       <workItem from="1604663289977" duration="7205000" />
       <workItem from="1604750152342" duration="8223000" />
-      <workItem from="1604924654544" duration="6457000" />
+      <workItem from="1604924654544" duration="9375000" />
     </task>
     <task id="LOCAL-00001" summary="nieuwe structuur en toevoegen van docker">
       <created>1604671051169</created>
@@ -124,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604758885439</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="formchecking &amp; persistentie loginform">
+      <created>1604931657388</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1604931657388</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,7 +147,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="nieuwe structuur en toevoegen van docker" />
     <MESSAGE value="toevoeging login en singup pagina" />
-    <option name="LAST_COMMIT_MESSAGE" value="toevoeging login en singup pagina" />
+    <MESSAGE value="formchecking &amp; persistentie loginform" />
+    <option name="LAST_COMMIT_MESSAGE" value="formchecking &amp; persistentie loginform" />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1604663932800">
@@ -156,9 +159,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="439" key="NewPhpFileDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604757830322" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1604758895717">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1604931660064">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604758895717" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604931660064" />
+    <state x="-1928" y="-8" width="1403" height="1022" maximized="true" key="dock-window-1" timestamp="1604934103047">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1928" y="-8" width="1403" height="1022" maximized="true" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604934103047" />
   </component>
 </project>
