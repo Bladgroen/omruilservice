@@ -6,12 +6,14 @@ $twig = new \Twig\Environment($loader);
 
 // General variables
 $basePath = __DIR__ . '/../';
-$boolean = '';
 
+$search = isset($_POST['search']) ? (string) $_POST['search'] : '';
 
 
 
 
 echo $twig->render('pages/index.twig', [
-
+    'search' => $search
 ]);
+
+

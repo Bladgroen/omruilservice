@@ -1,123 +1,54 @@
-<!DOCTYPE HTML>
-<!--
-	Striped by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-<head>
-    <title>Ticketz</title>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-    <link rel="stylesheet" href="css/main.css"/>
-</head>
-<body class="is-preload">
+{% extends 'layout/app.twig' %}
+{% block pageContent %}
+    <div id="content">
+        <div class="inner">
 
-<!-- Content -->
-<div id="content">
-    <div class="inner">
+            <!-- Post -->
+            <article class="box post post-excerpt">
+                <header>
+                    <!--
+                        Note: Titles and subtitles will wrap automatically when necessary, so don't worry
+                        if they get too long. You can also remove the <p> entirely if you don't
+                        need a subtitle.
+                    -->
+                    <h2><a href="#">Log in</a></h2>
 
-        <!-- Post -->
-        <article class="box post post-excerpt">
-            <header>
-                <!--
-                    Note: Titles and subtitles will wrap automatically when necessary, so don't worry
-                    if they get too long. You can also remove the <p> entirely if you don't
-                    need a subtitle.
-                -->
-                <h2><a href="#">Log in</a></h2>
+                </header>
+                <form id="loginform" method="post">
+                    <h3>Gebruikersnaam</h3>
+                    <input type="text" id="gebruikersnaam" name="gebruikersnaam" placeholder="Gebruikersnaam"
+                           value="{{ gebruikersnaam }}">
+                    <span>{{ errorGebruikersnaam }}</span>
+                    <h3>Wachtwoord</h3>
+                    <input type="text" id="wachtwoord" name="wachtwoord" placeholder="Wachtwoord"
+                           value="{{ wachtwoord }}">
+                    <span>{{ errorWachtwoord }}</span>
+                    <input type="hidden" name="moduleAction" value="processName">
+                    <input type="submit" id="button" value="Log in">
+                    <p>Nog geen account? <a href="signup.php">Sign up!</a></p>
+                </form>
 
-            </header>
-            <form id="loginform" method="post">
-                <h3>Gebruikersnaam</h3>
-                <input type="text" id="gebruikersnaam" name="gebruikersnaam" placeholder="Gebruikersnaam"
-                       value="{{ gebruikersnaam }}">
-                <span>{{ errorGebruikersnaam }}</span>
-                <h3>Wachtwoord</h3>
-                <input type="text" id="wachtwoord" name="wachtwoord" placeholder="Wachtwoord"
-                       value="{{ wachtwoord }}">
-                <span>{{ errorWachtwoord }}</span>
-                <input type="hidden" name="moduleAction" value="processName">
-                <input type="submit" id="button" value="Log in">
-                <p>Nog geen account? <a href="signup.php">Sign up!</a></p>
-            </form>
+            </article>
 
-        </article>
-
-        <!-- Post -->
-        <article class="box post post-excerpt">
-            <header>
+            <!-- Post -->
+            <article class="box post post-excerpt">
+                <header>
 
 
-            </header>
+                </header>
 
-        </article>
+            </article>
 
-        <!-- Pagination -->
-        <div class="pagination">
-            <!--<a href="#" class="button previous">Previous Page</a>-->
-            <div class="pages">
+            <!-- Pagination -->
+            <div class="pagination">
+                <!--<a href="#" class="button previous">Previous Page</a>-->
+                <div class="pages">
+
+                </div>
 
             </div>
 
         </div>
-
     </div>
-</div>
+{% endblock %}
 
-<!-- Sidebar -->
-<div id="sidebar">
-
-    <!-- Logo -->
-    <h1 id="logo"><a href="#">Ticketz</a></h1>
-
-    <!-- Nav -->
-    <nav id="nav">
-        <ul>
-            <li><a href="#">Recente Evenementen</a></li>
-            <li><a href="#">Top evenementen</a></li>
-            <li><a href="#">Vrienden uitnodigen</a></li>
-            <li class="current"><a href="#">Log in</a></li>
-        </ul>
-    </nav>
-
-    <!-- Search -->
-    <section class="box search">
-        <form method="post" action="#">
-            <input type="text" class="text" name="search" placeholder="Search"/>
-        </form>
-    </section>
-
-
-    <!-- Recent Posts -->
-    <section class="box recent-posts">
-        <header>
-            <h2>Filter</h2>
-        </header>
-        <ul>
-            <li><input type="checkbox" class="checkbox"><label class="filter">Dagtickets</label></li>
-            <li><input type="checkbox" class="checkbox"><label class="filter">Combitickets</label></li>
-            <li><input type="checkbox" class="checkbox"><label class="filter">Camping</label></li>
-
-        </ul>
-    </section>
-
-
-
-    <!-- Copyright -->
-    <ul id="copyright">
-        <li>&copy; Untitled.</li>
-        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-    </ul>
-
-</div>
-
-<!-- Scripts -->
-<script src="../../../public/js/jquery.min.js"></script>
-<script src="../../../public/js/browser.min.js"></script>
-<script src="../../../public/js/breakpoints.min.js"></script>
-<script src="../../../public/js/util.js"></script>
-<script src="../../../public/js/main.js"></script>
-
-</body>
-</html>

@@ -33,6 +33,8 @@ if ($moduleAction == 'processName'){
     }
 }
 
+
+
 echo $twig->render('pages/signup.twig', [
     'gebruikersnaam' => $gebruikersnaam,
     'email' => $email,
@@ -43,3 +45,4 @@ echo $twig->render('pages/signup.twig', [
     'errorWachtwoord' => $errorWachtwoord,
     'errorWachtwoord2' => $errorWachtwoord2
 ]);
+

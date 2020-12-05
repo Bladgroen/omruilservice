@@ -19,12 +19,162 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51a4b540-9d8f-4f60-80f0-fb1a5905826b" name="Default Changelist" comment="formchecking &amp; persistentie loginform">
+    <list default="true" id="51a4b540-9d8f-4f60-80f0-fb1a5905826b" name="Default Changelist" comment="formchecking &amp; persistentie signupform">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/public/images/image1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/templates/layout/app.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/templates/layout/parts/sidebar.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-data/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/omruilservice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/omruilservice.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/public/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/public/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/public/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/public/signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/templates/pages/index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/templates/pages/index.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/resources/templates/pages/login.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/templates/pages/login.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/resources/templates/pages/signup.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/templates/pages/signup.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/vendor/composer/InstalledVersions.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/vendor/composer/InstalledVersions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/vendor/composer/installed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/vendor/composer/platform_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/vendor/composer/platform_check.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/auto.cnf" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/auto.cnf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/ca-key.pem" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/ca-key.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/ca.pem" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/ca.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/client-cert.pem" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/client-cert.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/client-key.pem" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/client-key.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/ib_buffer_pool" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/ib_logfile0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/ibdata1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/ibtmp1" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/ibtmp1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/mysql/columns_priv.MYI" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/mysql/columns_priv.MYI" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/mysql/db.MYI" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/mysql/db.MYI" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/mysql/engine_cost.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/mysql/engine_cost.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/mysql/event.MYI" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/mysql/event.MYI" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/mysql/func.MYI" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/mysql/func.MYI" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/mysql/innodb_index_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/mysql/innodb_index_stats.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/mysql/innodb_table_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/mysql/innodb_table_stats.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/mysql/ndb_binlog_index.MYI" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/mysql/ndb_binlog_index.MYI" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/mysql/proc.MYD" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/mysql/proc.MYD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/mysql/proc.MYI" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/mysql/proc.MYI" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/mysql/procs_priv.MYI" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/mysql/procs_priv.MYI" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/mysql/proxies_priv.MYI" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/mysql/proxies_priv.MYI" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/mysql/server_cost.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/mysql/server_cost.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/mysql/tables_priv.MYD" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/mysql/tables_priv.MYD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/mysql/tables_priv.MYI" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/mysql/tables_priv.MYI" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/mysql/user.MYD" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/mysql/user.MYD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/mysql/user.MYI" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/mysql/user.MYI" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/private_key.pem" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/private_key.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/public_key.pem" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/public_key.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/server-cert.pem" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/server-cert.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/server-key.pem" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/server-key.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/host_summary.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/host_summary.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/host_summary_by_file_io.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/host_summary_by_file_io.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/host_summary_by_file_io_type.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/host_summary_by_file_io_type.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/host_summary_by_stages.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/host_summary_by_stages.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/host_summary_by_statement_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/host_summary_by_statement_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/host_summary_by_statement_type.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/host_summary_by_statement_type.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/innodb_buffer_stats_by_schema.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/innodb_buffer_stats_by_schema.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/innodb_buffer_stats_by_table.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/innodb_buffer_stats_by_table.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/innodb_lock_waits.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/innodb_lock_waits.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/io_by_thread_by_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/io_by_thread_by_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/io_global_by_file_by_bytes.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/io_global_by_file_by_bytes.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/io_global_by_file_by_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/io_global_by_file_by_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/io_global_by_wait_by_bytes.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/io_global_by_wait_by_bytes.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/io_global_by_wait_by_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/io_global_by_wait_by_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/latest_file_io.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/latest_file_io.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/memory_by_host_by_current_bytes.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/memory_by_host_by_current_bytes.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/memory_by_thread_by_current_bytes.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/memory_by_thread_by_current_bytes.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/memory_by_user_by_current_bytes.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/memory_by_user_by_current_bytes.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/memory_global_by_current_bytes.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/memory_global_by_current_bytes.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/memory_global_total.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/memory_global_total.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/metrics.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/metrics.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/processlist.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/processlist.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/ps_check_lost_instrumentation.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/ps_check_lost_instrumentation.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/schema_auto_increment_columns.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/schema_auto_increment_columns.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/schema_index_statistics.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/schema_index_statistics.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/schema_object_overview.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/schema_object_overview.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/schema_redundant_indexes.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/schema_redundant_indexes.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/schema_table_lock_waits.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/schema_table_lock_waits.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/schema_table_statistics.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/schema_table_statistics.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/schema_table_statistics_with_buffer.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/schema_table_statistics_with_buffer.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/schema_tables_with_full_table_scans.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/schema_tables_with_full_table_scans.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/schema_unused_indexes.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/schema_unused_indexes.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/session.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/session.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/session_ssl_status.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/session_ssl_status.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/statement_analysis.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/statement_analysis.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/statements_with_errors_or_warnings.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/statements_with_errors_or_warnings.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/statements_with_full_table_scans.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/statements_with_full_table_scans.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/statements_with_runtimes_in_95th_percentile.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/statements_with_runtimes_in_95th_percentile.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/statements_with_sorting.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/statements_with_sorting.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/statements_with_temp_tables.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/statements_with_temp_tables.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/sys_config.TRG" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/sys_config.TRG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/sys_config.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/sys_config.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/user_summary.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/user_summary.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/user_summary_by_file_io.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/user_summary_by_file_io.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/user_summary_by_file_io_type.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/user_summary_by_file_io_type.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/user_summary_by_stages.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/user_summary_by_stages.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/user_summary_by_statement_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/user_summary_by_statement_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/user_summary_by_statement_type.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/user_summary_by_statement_type.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/version.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/version.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/wait_classes_global_by_avg_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/wait_classes_global_by_avg_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/wait_classes_global_by_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/wait_classes_global_by_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/waits_by_host_by_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/waits_by_host_by_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/waits_by_user_by_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/waits_by_user_by_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/waits_global_by_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/waits_global_by_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024host_summary.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024host_summary.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024host_summary_by_file_io.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024host_summary_by_file_io.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024host_summary_by_file_io_type.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024host_summary_by_file_io_type.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024host_summary_by_stages.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024host_summary_by_stages.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024host_summary_by_statement_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024host_summary_by_statement_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024host_summary_by_statement_type.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024host_summary_by_statement_type.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024innodb_buffer_stats_by_schema.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024innodb_buffer_stats_by_schema.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024innodb_buffer_stats_by_table.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024innodb_buffer_stats_by_table.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024innodb_lock_waits.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024innodb_lock_waits.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024io_by_thread_by_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024io_by_thread_by_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024io_global_by_file_by_bytes.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024io_global_by_file_by_bytes.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024io_global_by_file_by_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024io_global_by_file_by_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024io_global_by_wait_by_bytes.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024io_global_by_wait_by_bytes.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024io_global_by_wait_by_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024io_global_by_wait_by_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024latest_file_io.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024latest_file_io.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024memory_by_host_by_current_bytes.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024memory_by_host_by_current_bytes.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024memory_by_thread_by_current_bytes.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024memory_by_thread_by_current_bytes.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024memory_by_user_by_current_bytes.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024memory_by_user_by_current_bytes.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024memory_global_by_current_bytes.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024memory_global_by_current_bytes.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024memory_global_total.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024memory_global_total.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024processlist.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024processlist.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024ps_digest_95th_percentile_by_avg_us.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024ps_digest_95th_percentile_by_avg_us.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024ps_digest_avg_latency_distribution.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024ps_digest_avg_latency_distribution.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024ps_schema_table_statistics_io.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024ps_schema_table_statistics_io.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024schema_flattened_keys.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024schema_flattened_keys.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024schema_index_statistics.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024schema_index_statistics.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024schema_table_lock_waits.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024schema_table_lock_waits.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024schema_table_statistics.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024schema_table_statistics.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024schema_table_statistics_with_buffer.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024schema_table_statistics_with_buffer.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024schema_tables_with_full_table_scans.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024schema_tables_with_full_table_scans.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024session.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024session.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024statement_analysis.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024statement_analysis.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024statements_with_errors_or_warnings.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024statements_with_errors_or_warnings.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024statements_with_full_table_scans.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024statements_with_full_table_scans.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024statements_with_runtimes_in_95th_percentile.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024statements_with_runtimes_in_95th_percentile.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024statements_with_sorting.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024statements_with_sorting.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024statements_with_temp_tables.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024statements_with_temp_tables.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024user_summary.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024user_summary.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024user_summary_by_file_io.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024user_summary_by_file_io.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024user_summary_by_file_io_type.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024user_summary_by_file_io_type.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024user_summary_by_stages.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024user_summary_by_stages.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024user_summary_by_statement_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024user_summary_by_statement_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024user_summary_by_statement_type.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024user_summary_by_statement_type.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024wait_classes_global_by_avg_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024wait_classes_global_by_avg_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024wait_classes_global_by_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024wait_classes_global_by_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024waits_by_host_by_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024waits_by_host_by_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024waits_by_user_by_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024waits_by_user_by_latency.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/sys/x@0024waits_global_by_latency.frm" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/sys/x@0024waits_global_by_latency.frm" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +201,9 @@
       <path value="$PROJECT_DIR$/app/vendor/composer" />
       <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-mbstring" />
       <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/cache" />
     </include_path>
   </component>
   <component name="ProjectId" id="1js1Zhwzj4suC16KrPBUR5c9KNM" />
@@ -61,7 +214,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../odisee-helpdesk" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -82,7 +235,12 @@
       <workItem from="1604578044403" duration="2042000" />
       <workItem from="1604663289977" duration="7205000" />
       <workItem from="1604750152342" duration="8223000" />
-      <workItem from="1604924654544" duration="9375000" />
+      <workItem from="1604924654544" duration="9687000" />
+      <workItem from="1605012237393" duration="132000" />
+      <workItem from="1606471360946" duration="6084000" />
+      <workItem from="1606820967278" duration="1188000" />
+      <workItem from="1606995069234" duration="464000" />
+      <workItem from="1607163167751" duration="4926000" />
     </task>
     <task id="LOCAL-00001" summary="nieuwe structuur en toevoegen van docker">
       <created>1604671051169</created>
@@ -126,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604931657388</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="formchecking &amp; persistentie signupform">
+      <created>1604934575142</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1604934575142</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,24 +313,25 @@
     <MESSAGE value="nieuwe structuur en toevoegen van docker" />
     <MESSAGE value="toevoeging login en singup pagina" />
     <MESSAGE value="formchecking &amp; persistentie loginform" />
-    <option name="LAST_COMMIT_MESSAGE" value="formchecking &amp; persistentie loginform" />
+    <MESSAGE value="formchecking &amp; persistentie signupform" />
+    <option name="LAST_COMMIT_MESSAGE" value="formchecking &amp; persistentie signupform" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1604663932800">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1607163904665">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604663932800" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607163904665" />
     <state x="794" y="439" key="NewPhpFileDialog" timestamp="1604757830322">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="439" key="NewPhpFileDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604757830322" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1604931660064">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1604934576921">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604931660064" />
-    <state x="-1928" y="-8" width="1403" height="1022" maximized="true" key="dock-window-1" timestamp="1604934103047">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604934576921" />
+    <state x="-1928" y="-8" width="1403" height="1022" maximized="true" key="dock-window-1" timestamp="1605012370228">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1928" y="-8" width="1403" height="1022" maximized="true" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604934103047" />
+    <state x="-1928" y="-8" width="1403" height="1022" maximized="true" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605012370228" />
   </component>
 </project>
