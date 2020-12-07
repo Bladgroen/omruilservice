@@ -1,6 +1,7 @@
 {
     "require": {
         "twig/twig": "^3.1",
-        "doctrine/dbal": "^2.12"
+        "doctrine/dbal": "^2.12",
+        "bramus/router": "~1.5"
     }
 }

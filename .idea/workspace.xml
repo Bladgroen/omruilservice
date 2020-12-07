@@ -19,15 +19,25 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51a4b540-9d8f-4f60-80f0-fb1a5905826b" name="Default Changelist" comment="twig aanpassingen">
-      <change afterPath="$PROJECT_DIR$/app/config/database.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/public/images/image2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysql-sql/omruilservice.sql" afterDir="false" />
+    <list default="true" id="51a4b540-9d8f-4f60-80f0-fb1a5905826b" name="Default Changelist" comment="evenementen komen uit de databank">
+      <change afterPath="$PROJECT_DIR$/app/public/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/public/detail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/templates/pages/detail.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/omruilservice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/omruilservice.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/public/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/resources/templates/pages/index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/templates/pages/index.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/vendor/composer/InstalledVersions.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/vendor/composer/InstalledVersions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/vendor/composer/autoload_namespaces.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/vendor/composer/installed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/ib_buffer_pool" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysql-data/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/ib_logfile0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysql-data/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/ibdata1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql-data/ibtmp1" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/ibtmp1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysql-data/mysql/innodb_index_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/mysql/innodb_index_stats.ibd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysql-data/mysql/innodb_table_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-data/mysql/innodb_table_stats.ibd" afterDir="false" />
     </list>
@@ -59,6 +69,7 @@
       <path value="$PROJECT_DIR$/app/vendor/doctrine/event-manager" />
       <path value="$PROJECT_DIR$/app/vendor/doctrine/dbal" />
       <path value="$PROJECT_DIR$/app/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/app/vendor/bramus/router" />
     </include_path>
   </component>
   <component name="ProjectId" id="1js1Zhwzj4suC16KrPBUR5c9KNM" />
@@ -69,7 +80,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/wmss-boilerplate-mastermiro" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -95,7 +106,8 @@
       <workItem from="1606471360946" duration="6084000" />
       <workItem from="1606820967278" duration="1188000" />
       <workItem from="1606995069234" duration="464000" />
-      <workItem from="1607163167751" duration="6629000" />
+      <workItem from="1607163167751" duration="13189000" />
+      <workItem from="1607338090820" duration="3367000" />
     </task>
     <task id="LOCAL-00001" summary="nieuwe structuur en toevoegen van docker">
       <created>1604671051169</created>
@@ -153,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607172684073</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="evenementen komen uit de databank">
+      <created>1607174349769</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1607174349769</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,21 +196,22 @@
     <MESSAGE value="formchecking &amp; persistentie loginform" />
     <MESSAGE value="formchecking &amp; persistentie signupform" />
     <MESSAGE value="twig aanpassingen" />
-    <option name="LAST_COMMIT_MESSAGE" value="twig aanpassingen" />
+    <MESSAGE value="evenementen komen uit de databank" />
+    <option name="LAST_COMMIT_MESSAGE" value="evenementen komen uit de databank" />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1607172906415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607172906415" />
-    <state x="794" y="439" key="NewPhpFileDialog" timestamp="1607172715171">
+    <state x="794" y="439" key="NewPhpFileDialog" timestamp="1607179884843">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="439" key="NewPhpFileDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607172715171" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1607172686309">
+    <state x="794" y="439" key="NewPhpFileDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607179884843" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1607174352125">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607172686309" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607174352125" />
     <state x="-1928" y="-8" width="1403" height="1022" maximized="true" key="dock-window-1" timestamp="1605012370228">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>

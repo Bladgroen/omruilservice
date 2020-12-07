@@ -3,6 +3,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 $loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/../resources/templates');
 $twig = new \Twig\Environment($loader);
+$router = new \Bramus\Router\Router();
 
 // General variables
 $basePath = __DIR__ . '/../';
@@ -27,6 +28,15 @@ $result = $connection->connect();
 $stmt = $connection->prepare('SELECT * FROM events');
 $stmt->execute();
 $collections = $stmt->fetchAllAssociative();
+
+//$router->get('/index', function () use ($twig){
+//    global $search;
+//    global $connection;
+//    $stmt = $connection->prepare('SELECT * FROM events');
+//    $stmt->execute();
+//    $collections = $stmt->fetchAllAssociative();
+//   echo $twig->render('pages/index.twig', [ 'search' => $search, 'events' => $collections]);
+//});
 
 echo $twig->render('pages/index.twig', [
     'search' => $search,

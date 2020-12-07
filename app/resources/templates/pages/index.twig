@@ -8,13 +8,14 @@
             <!-- Post -->
             {% for post in events %}
                 <article class="box post post-excerpt">
+                    <form></form>
                     <header>
                         <!--
                             Note: Titles and subtitles will wrap automatically when necessary, so don't worry
                             if they get too long. You can also remove the <p> entirely if you don't
                             need a subtitle.
                         -->
-                        <h2><a href="#">{{ post.eventName }}</a></h2>
+                        <h2><a href="/detail.php?event={{ post.eventID }}">{{ post.eventName }}</a></h2>
 
                     </header>
                     <div class="info">
@@ -38,7 +39,7 @@
                             <li><a href="#" class="icon brands fa-facebook-f">128</a></li>
                         </ul>
                     </div>
-                    <a href="#" class="image featured"><img src="images/image{{ post.eventID }}.jpg" alt=""/></a>
+                    <a href="/detail.php?event={{ post.eventID }}" class="image featured"><img src="images/image{{ post.eventID }}.jpg" alt=""/></a>
                     <p>
                         {{ post.description }}
                     </p>
