@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.20, for Win64 (x86_64)
 --
--- Host: localhost    Database: mydb
+-- Host: localhost    Database: omruilservice
 -- ------------------------------------------------------
 -- Server version	8.0.20
 
@@ -18,6 +18,7 @@
 --
 -- Table structure for table `events`
 --
+
 CREATE DATABASE IF NOT EXISTS `omruilservice` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE `omruilservice`;
 
@@ -33,7 +34,7 @@ CREATE TABLE `events` (
   `description` varchar(200) DEFAULT NULL,
   `locatie` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`eventID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,6 +43,7 @@ CREATE TABLE `events` (
 
 LOCK TABLES `events` WRITE;
 /*!40000 ALTER TABLE `events` DISABLE KEYS */;
+INSERT INTO `events` VALUES (1,'Tomorrowland',200,'25-07-2020','26-07-2020','Een festival in Boom','Boom');
 /*!40000 ALTER TABLE `events` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -79,7 +81,7 @@ DROP TABLE IF EXISTS `tickets`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `tickets` (
   `ticketID` int NOT NULL AUTO_INCREMENT,
-  `ticketName` varchar(20) DEFAULT NULL,
+  `ticketName` varchar(50) DEFAULT NULL,
   `ticketPrice` int DEFAULT NULL,
   `reason` varchar(200) DEFAULT NULL,
   `events_eventID` int NOT NULL,
@@ -87,7 +89,7 @@ CREATE TABLE `tickets` (
   PRIMARY KEY (`ticketID`),
   KEY `fk_tickets_events1_idx` (`events_eventID`),
   CONSTRAINT `fk_tickets_events1` FOREIGN KEY (`events_eventID`) REFERENCES `events` (`eventID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -96,6 +98,7 @@ CREATE TABLE `tickets` (
 
 LOCK TABLES `tickets` WRITE;
 /*!40000 ALTER TABLE `tickets` DISABLE KEYS */;
+INSERT INTO `tickets` VALUES (1,'dagticket Tomorrowland',200,'Corona',1,'dagticket'),(3,'combiticket Tomorrowland',250,'Corona',1,'combiticket'),(4,'campingticket Tomorrowland',250,'Corona',1,'camping');
 /*!40000 ALTER TABLE `tickets` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -135,4 +138,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-05 13:32:30
+-- Dump completed on 2020-12-29 17:11:12

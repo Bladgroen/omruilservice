@@ -29,14 +29,7 @@ $stmt = $connection->prepare('SELECT * FROM events');
 $stmt->execute();
 $collections = $stmt->fetchAllAssociative();
 
-//$router->get('/index', function () use ($twig){
-//    global $search;
-//    global $connection;
-//    $stmt = $connection->prepare('SELECT * FROM events');
-//    $stmt->execute();
-//    $collections = $stmt->fetchAllAssociative();
-//   echo $twig->render('pages/index.twig', [ 'search' => $search, 'events' => $collections]);
-//});
+
 
 echo $twig->render('pages/index.twig', [
     'search' => $search,

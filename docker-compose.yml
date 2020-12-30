@@ -17,7 +17,7 @@ services:
      - "3317:3316"
     volumes:
      - "./mysql-data:/var/lib/mysql"
-     - "./mysql-sql/demo.sql:/docker-entrypoint-initdb.d/dump.sql"
+     - "./mysql-sql/omruilservice.sql:/docker-entrypoint-initdb.d/dump.sql"
     environment:
      - MYSQL_ROOT_PASSWORD=Azerty123
   myadmin:
