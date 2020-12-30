@@ -7,33 +7,19 @@ $router = new \Bramus\Router\Router();
 
 // General variables
 $basePath = __DIR__ . '/../';
-require_once $basePath . 'config/database.php';
+
 require_once $basePath . 'vendor/autoload.php';
+require_once $basePath . 'src/Models/Events.php';
+require_once $basePath . 'src/functions.php';
+
 
 $search = isset($_POST['search']) ? (string) $_POST['search'] : '';
 
-
-$connectionParams = [
-    'host' => DB_HOST,
-    'dbname' => DB_NAME_FF,
-    'user' => DB_USER,
-    'password' => DB_PASS,
-    'driver' => 'pdo_mysql',
-    'charset' => 'utf8mb4'
-];
-
-$connection = \Doctrine\DBAL\DriverManager::getConnection($connectionParams);
-$result = $connection->connect();
-
-$stmt = $connection->prepare('SELECT * FROM events');
-$stmt->execute();
-$collections = $stmt->fetchAllAssociative();
-
-
+$event = getEventObjects();
 
 echo $twig->render('pages/index.twig', [
-    'search' => $search,
-    'events' => $collections
+    'search' => $_POST['search'] ?? '',
+    'events' => $event
 ]);
 
 

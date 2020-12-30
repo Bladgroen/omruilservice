@@ -5,18 +5,21 @@ class Events
 {
     private int $id;
     private string $name;
-    private float $price;
+    private int $price;
     private string $start;
     private string $dag;
+    private string $maand;
     private string $end;
     private string $description;
     private string $location;
 
-    public function __construct(int $id, int $name, int $price, string $start, string $end, string $description, string $location)
+    public function __construct(int $id, string $name, int $price, string $start, string $dag, string $maand, string $end, string $description, string $location)
     {
         $this->id = $id;
         $this->name = $name;
         $this->price = $price;
+        $this->dag = $dag;
+        $this->maand = $maand;
         $this->start = $start;
         $this->end = $end;
         $this->description = $description;
@@ -103,6 +106,16 @@ class Events
         $this->dag = $dag;
     }
 
+    public function getMaand(): string
+    {
+        return $this->maand;
+    }
+
+    public function setMaand(string $maand): void
+    {
+        $this->maand = $maand;
+    }
+
     /**
      * @return string
      */
@@ -151,7 +164,8 @@ class Events
         $this->location = $location;
     }
 
-    public function __toString(): string{
+    public function __toString(): string
+    {
         return $this->id . ' ' . $this->name . ' ' . $this->price . ' ' . $this->start . ' ' . $this->dag . ' ' . $this->end . ' ' . $this->description . ' ' . $this->location;
     }
 
