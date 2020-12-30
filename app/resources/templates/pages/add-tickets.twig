@@ -1,0 +1,60 @@
+{% extends 'layout/app.twig' %}
+{% block pageContent %}
+    <div id="content">
+        <div class="inner">
+
+            <!-- Post -->
+            <article class="box post post-excerpt">
+                <header>
+                    <!--
+                        Note: Titles and subtitles will wrap automatically when necessary, so don't worry
+                        if they get too long. You can also remove the <p> entirely if you don't
+                        need a subtitle.
+                    -->
+                    <h2><a href="#">Ticket toevoegen.</a></h2>
+
+                </header>
+                <form id="Ticketform" method="post">
+                    <h3>Ticketnaam</h3>
+                    <input type="text" id="ticketnaam" name="ticketnaam" placeholder="ticketnaam"
+                           value="">
+                    <span></span>
+                    <h3>ticketPrijs</h3>
+                    <input type="number" id="ticketprijs" min="0" max="99999999">
+                    <span></span>
+                    <h3>Soort ticket</h3>
+                    <select name="soortticket" id="soortticket">
+                        <option value="dagticket">Dagticket</option>
+                        <option value="combiticket">Combiticket</option>
+                        <option value="camping">Campingticket</option>
+                    </select>
+                    <h3>Reden</h3>
+                    <textarea></textarea>
+                    <input type="hidden" name="moduleAction" value="processName">
+                    <input type="submit" id="button" value="Verzenden">
+
+                </form>
+
+            </article>
+
+            <!-- Post -->
+            <article class="box post post-excerpt">
+                <header>
+
+
+                </header>
+
+            </article>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <!--<a href="#" class="button previous">Previous Page</a>-->
+                <div class="pages">
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
