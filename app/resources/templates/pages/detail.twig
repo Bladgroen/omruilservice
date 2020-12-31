@@ -40,19 +40,24 @@
                                 <ul>
                                     <h3>Dagtickets</h3>
                                     {% for dag in dagticket %}
-                                        <li><a href="#">{{ dag.ticketName }} | {{ dag.ticketPrice }} euro</a></li>
+                                        <li><a href="/detailTicket.php?ticket={{ dag.ticketID }}">{{ dag.ticketName }}
+                                                | {{ dag.ticketPrice }} euro</a></li>
                                     {% endfor %}
                                 </ul>
                                 <ul>
                                     <h3>Combitickets</h3>
                                     {% for combi in combitickets %}
-                                        <li><a href="#">{{ combi.ticketName }} | {{ combi.ticketPrice }} euro </a></li>
+                                        <li>
+                                            <a href="/detailTicket.php?ticket={{ combi.ticketID }}">{{ combi.ticketName }}
+                                                | {{ combi.ticketPrice }} euro </a></li>
                                     {% endfor %}
                                 </ul>
                                 <ul>
                                     <h3>Campingtickets</h3>
                                     {% for camping in campingtickets %}
-                                        <li><a href="#">{{ camping.ticketName }} | {{ camping.ticketPrice }} euro</a>
+                                        <li>
+                                            <a href="/detailTicket.php?ticket={{ camping.ticketID }}">{{ camping.ticketName }}
+                                                | {{ camping.ticketPrice }} euro</a>
                                         </li>
                                     {% endfor %}
                                 </ul>

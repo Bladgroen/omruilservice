@@ -3,6 +3,8 @@
 require_once $basePath . 'config/database.php';
 require_once $basePath . 'vendor/autoload.php';
 require_once $basePath . 'src/Models/Events.php';
+require_once $basePath . 'src/Models/Tickets.php';
+require_once $basePath . 'src/Models/Users.php';
 
 
 $connectionParams = [
@@ -30,7 +32,7 @@ function getEventObjects(): array
         $maand = '';
         $sub = substr($collections[$i]['startTime'], 0, 2);
         $sub2 = substr($collections[$i]['startTime'], 3, 2);
-        switch ($sub2){
+        switch ($sub2) {
             case '01':
                 $maand = 'Jan';
                 break;
@@ -88,10 +90,11 @@ $stmt2 = $connection->prepare('SELECT * FROM tickets');
 $stmt2->execute();
 $collections2 = $stmt2->fetchAllAssociative();
 
-function getTicketObjects(): array{
-    global  $collections2;
+function getTicketObjects(): array
+{
+    global $collections2;
     $tickets = [];
-    for ($i = 0; $i <= count($collections2) - 1; $i++){
+    for ($i = 0; $i <= count($collections2) - 1; $i++) {
         $tickets[] = new Tickets(
             $collections2[$i]['ticketID'],
             $collections2[$i]['ticketName'],
@@ -102,4 +105,52 @@ function getTicketObjects(): array{
         );
     }
     return $tickets;
+}
+
+$stmt3 = $connection->prepare('SELECT * FROM sellers');
+$stmt3->execute();
+$collections3 = $stmt3->fetchAllAssociative();
+
+function getUserObjects(): array
+{
+    global $collections3;
+    $users = [];
+    for ($i = 0; $i <= count($collections3) - 1; $i++) {
+        $users[] = new Users(
+            $collections3[$i]['sellerID'],
+            $collections3[$i]['sellerName'],
+            $collections3[$i]['sellerMail'],
+            $collections3[$i]['sellerPassword']
+        );
+    }
+    return $users;
+}
+
+function getTicket(int $id): array
+{
+    global $connection;
+    $stmt = $connection->prepare('SELECT * FROM tickets WHERE ticketID = ?');
+    $stmt->execute([$id]);
+    $collections = $stmt->fetchAllAssociative();
+    $ticket = new Tickets(
+        $collections[0]['ticketID'],
+        $collections[0]['ticketName'],
+        $collections[0]['ticketPrice'],
+        $collections[0]['reason'],
+        $collections[0]['events_eventID'],
+        $collections[0]['soort']
+    );
+    return $collections;
+}
+
+function getUserFromTicket(int $id): array{
+    global $connection;
+    $stmt = $connection->prepare('SELECT sellers_sellerID FROM tickets_has_sellers WHERE tickets_ticketID = ?');
+    $stmt->execute([$id]);
+    $collections = $stmt->fetchAllAssociative();
+    $nummer = $collections[0];
+    $stmt2 = $connection->prepare('SELECT sellerName, sellerMail FROM sellers WHERE sellerID = ?');
+    $stmt2->execute([(int) $nummer]);
+    $collections2 = $stmt2->fetchAllAssociative();
+    return $collections2;
 }

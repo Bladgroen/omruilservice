@@ -13,10 +13,12 @@ require_once $basePath . 'src/Models/Events.php';
 require_once $basePath . 'src/functions.php';
 require_once $basePath . 'src/Models/Tickets.php';
 
-
+$ticket = getTicket($_GET['ticket']);
+$user = getUserFromTicket($_GET['ticket']);
 
 
 
 echo $twig->render('pages/detailTicket.twig', [
-
+    'ticket' => $ticket,
+    'user' => $user
 ]);

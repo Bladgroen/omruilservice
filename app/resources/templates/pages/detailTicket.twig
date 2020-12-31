@@ -15,8 +15,9 @@
 
                     <!-- Post -->
 
+                    <article class="box post post-excerpt">
                         <article class="box post post-excerpt">
-                            <article class="box post post-excerpt">
+                            {% for post in ticket %}
                                 <form></form>
                                 <header>
                                     <!--
@@ -24,20 +25,22 @@
                                         if they get too long. You can also remove the <p> entirely if you don't
                                         need a subtitle.
                                     -->
-                                    <h2><a href="#">ticketnaam</a></h2>
-                                    <p>verkoper</p>
+                                    <h2>{{ post.ticketName }}</h2>
+                                    {% for usr in user %}
+                                        <p>{{ usr.sellerName }}</p>
+                                        <p>{{ usr.sellerMail }}</p>
+                                    {% endfor %}
                                 </header>
 
-                                <p>prijs</p>
-                                <p>reden</p>
+                                <p>{{post.ticketPrice}} EURO</p>
+                                <p>{{post.reason}}</p>
                                 <input type="submit" value="Kopen">
-
-
-                            </article>
-
-
+                            {% endfor %}
 
                         </article>
+
+
+                    </article>
 
 
                     <!-- Pagination -->

@@ -57,8 +57,8 @@ DROP TABLE IF EXISTS `sellers`;
 CREATE TABLE `sellers` (
   `sellerID` int NOT NULL AUTO_INCREMENT,
   `sellerName` varchar(20) DEFAULT NULL,
-  `sellerMail` varchar(20) DEFAULT NULL,
-  `sellerPassword` varchar(20) DEFAULT NULL,
+  `sellerMail` varchar(40) DEFAULT NULL,
+  `sellerPassword` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`sellerID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
