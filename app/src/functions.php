@@ -83,3 +83,23 @@ function getEventObjects(): array
     }
     return $events;
 }
+
+$stmt2 = $connection->prepare('SELECT * FROM tickets');
+$stmt2->execute();
+$collections2 = $stmt2->fetchAllAssociative();
+
+function getTicketObjects(): array{
+    global  $collections2;
+    $tickets = [];
+    for ($i = 0; $i <= count($collections2) - 1; $i++){
+        $tickets[] = new Tickets(
+            $collections2[$i]['ticketID'],
+            $collections2[$i]['ticketName'],
+            $collections2[$i]['ticketPrice'],
+            $collections2[$i]['reason'],
+            $collections2[$i]['events_eventID'],
+            $collections2[$i]['soort']
+        );
+    }
+    return $tickets;
+}

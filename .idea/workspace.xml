@@ -20,11 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51a4b540-9d8f-4f60-80f0-fb1a5905826b" name="Default Changelist" comment="evenementen komen uit de databank">
-      <change afterPath="$PROJECT_DIR$/app/public/add-event.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/public/add-ticket.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/resources/templates/pages/add-event.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/resources/templates/pages/add-tickets.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/public/detailTicket.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/templates/pages/detailTicket.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/Models/Tickets.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/templates/layout/parts/sidebar.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/templates/layout/parts/sidebar.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/functions.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +66,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../odisee-helpdesk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -94,7 +95,9 @@
       <workItem from="1607163167751" duration="13189000" />
       <workItem from="1607338090820" duration="3367000" />
       <workItem from="1609242657532" duration="4150000" />
-      <workItem from="1609335856262" duration="10014000" />
+      <workItem from="1609335856262" duration="10263000" />
+      <workItem from="1609346995935" duration="73000" />
+      <workItem from="1609413567362" duration="4352000" />
     </task>
     <task id="LOCAL-00001" summary="nieuwe structuur en toevoegen van docker">
       <created>1604671051169</created>
@@ -173,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609345348776</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="tickets en evenementen toevoegpagina">
+      <created>1609346771490</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1609346771490</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,32 +210,33 @@
     <MESSAGE value="evenementen komen uit de databank" />
     <MESSAGE value="aanmaken van events klasse" />
     <MESSAGE value="classe in orde gemaakt" />
-    <option name="LAST_COMMIT_MESSAGE" value="classe in orde gemaakt" />
+    <MESSAGE value="tickets en evenementen toevoegpagina" />
+    <option name="LAST_COMMIT_MESSAGE" value="tickets en evenementen toevoegpagina" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="554" y="120" key="#com.intellij.ide.util.MemberChooser" timestamp="1609337896966">
+    <state x="554" y="120" key="#com.intellij.ide.util.MemberChooser" timestamp="1609417145366">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="554" y="120" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1609337896966" />
+    <state x="554" y="120" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1609417145366" />
     <state x="592" y="218" key="FileChooserDialogImpl" timestamp="1609338295977">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="592" y="218" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1609338295977" />
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607172906415" />
-    <state x="502" y="119" key="NewPhpClassDialog" timestamp="1609336691499">
+    <state x="502" y="119" key="NewPhpClassDialog" timestamp="1609416287065">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="502" y="119" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1609336691499" />
-    <state x="794" y="439" key="NewPhpFileDialog" timestamp="1609346678893">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="502" y="119" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1609416287065" />
+    <state x="635" y="348" key="NewPhpFileDialog" timestamp="1609415208262">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="635" y="348" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1609338372970" />
+    <state x="635" y="348" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1609415208262" />
     <state x="794" y="439" key="NewPhpFileDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1609346678893" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1609345350188">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1609346773858">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="442" y="197" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1609338817577" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1609345350188" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1609346773858" />
     <state x="-1928" y="-8" width="1403" height="1022" maximized="true" key="dock-window-1" timestamp="1605012370228">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
