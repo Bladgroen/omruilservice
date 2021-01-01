@@ -18,28 +18,15 @@
         <section class="box search">
             <form method="post" action="#">
                 <input type="text" class="text" name="search" placeholder="Search" value="{{ search }}"/>
+                <input type="hidden" name="moduleAction" value="processName">
+                <input type="submit" name="zoeken" id="submit_Zoekterm" value="Zoeken">
             </form>
         </section>
 
 
         <!-- Recent Posts -->
-        <section class="box recent-posts">
-            <header>
-                <h2>Filter</h2>
-            </header>
-            <ul>
-                <li><input type="checkbox" class="checkbox"><label class="filter">Dagtickets</label></li>
-                <li><input type="checkbox" class="checkbox"><label class="filter">Combitickets</label></li>
-                <li><input type="checkbox" class="checkbox"><label class="filter">Camping</label></li>
 
-            </ul>
-        </section>
 
-        <section>
-            <input type="hidden" name="moduleAction" value="processName">
-            <input type="submit" name="zoeken" id="submit_Zoekterm" value="Zoeken">
-
-        </section>
     </form>
 
 

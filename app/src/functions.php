@@ -154,3 +154,69 @@ function getUserFromTicket(int $id): array{
     $collections2 = $stmt2->fetchAllAssociative();
     return $collections2;
 }
+
+function searchEvents(string $term): array{
+    global $connection;
+    $events = [];
+    $stmt = $connection->prepare("SELECT * FROM `events` WHERE `eventName` LIKE :needle");
+    $needle = '%' . $term . '%';
+    $stmt->bindValue(':needle', $needle, PDO::PARAM_STR);
+    $stmt->execute();
+    $collections = $stmt->fetchAllAssociative();
+    for ($i = 0; $i <= count($collections) - 1; $i++){
+        $maand = '';
+        $sub = substr($collections[$i]['startTime'], 0, 2);
+        $sub2 = substr($collections[$i]['startTime'], 3, 2);
+        switch ($sub2) {
+            case '01':
+                $maand = 'Jan';
+                break;
+            case '02':
+                $maand = 'Feb';
+                break;
+            case '03':
+                $maand = 'Mar';
+                break;
+            case '04':
+                $maand = 'Apr';
+                break;
+            case '05':
+                $maand = 'Mei';
+                break;
+            case '06':
+                $maand = 'Jun';
+                break;
+            case '07':
+                $maand = 'Jul';
+                break;
+            case '08':
+                $maand = 'Aug';
+                break;
+            case '09':
+                $maand = 'Sep';
+                break;
+            case '10':
+                $maand = 'Okt';
+                break;
+            case '11':
+                $maand = 'Nov';
+                break;
+            case '12':
+                $maand = 'Dec';
+                break;
+        }
+
+        $events[] = new Events(
+            $collections[$i]['eventID'],
+            $collections[$i]['eventName'],
+            $collections[$i]['standaardPrijsTicket'],
+            $collections[$i]['startTime'],
+            $sub,
+            $maand,
+            $collections[$i]['endTime'],
+            $collections[$i]['description'],
+            $collections[$i]['locatie']
+        );
+    }
+    return $events;
+}

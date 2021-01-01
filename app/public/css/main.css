@@ -115,6 +115,10 @@ form#signupform input[type=text] {
     width: 30%;
 }
 
+input#submit_Zoekterm{
+    margin-top: 20px;
+}
+
 #submit_Zoekterm {
     margin-left: 37.5px;
 }

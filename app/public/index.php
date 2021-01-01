@@ -13,12 +13,17 @@ require_once $basePath . 'src/Models/Events.php';
 require_once $basePath . 'src/functions.php';
 
 
-$search = isset($_POST['search']) ? (string) $_POST['search'] : '';
+$search = isset($_GET['search']) ? (string)$_GET['search'] : '';
 
-$event = getEventObjects();
+if (isset($_GET['search'])) {
+    $event = searchEvents($_GET['search']);
+} else {
+    $event = getEventObjects();
+}
+
 
 echo $twig->render('pages/index.twig', [
-    'search' => $_POST['search'] ?? '',
+    'search' => $_GET['search'] ?? '',
     'events' => $event
 ]);
 
