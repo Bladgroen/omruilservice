@@ -13,9 +13,72 @@ require_once $basePath . 'vendor/autoload.php';
 require_once $basePath . 'src/Models/Events.php';
 require_once $basePath . 'src/functions.php';
 
+$desc = isset($_POST['desc']) ? $_POST['desc'] : '';
+$error = true;
+$errorNaam = '';
+$errorLocatie = '';
+$errorPrijs = '';
+$errorDatum1 = '';
+$errorDatum2 = '';
+$errorDesc = '';
 
+if (isset($_POST['bttnsubmit'])){
+    if (!$_POST['evenementnaam']){
+        $error = false;
+        $errorNaam = 'Vul de naam van uw event in. ';
+    }
+    if (strlen($_POST['evenementnaam']) > 45){
+        $error = false;
+        $errorNaam .= 'De naam van uw event is te lang.';
+    }
+    if (!$_POST['locatie']){
+        $error = false;
+        $errorLocatie = 'Vul een locatie in. ';
+    }
+    if (strlen($_POST['locatie']) > 45){
+        $error = false;
+        $errorLocatie .= 'De locatie naam is te lang.';
+    }
+    if (!$_POST['ticketprijs']){
+        $error = false;
+        $errorPrijs = 'Gelieve een prijs in te vullen. ';
+    }
+    if ($_POST['ticketprijs'] < 0){
+        $error = false;
+        $errorPrijs .= 'De prijs kan niet negatief zijn.';
+    }
+    if (!$_POST['datum1']){
+        $error = false;
+        $errorDatum1 = 'Gelieve een datum in te geven. ';
+    }
+    if (checkDate($_POST['datum1']) == false){
+        $error = false;
+        $errorDatum1 .= 'Gelieve de datum juist in te geven d-m-j';
+    }
+    if (!$_POST['datum2']){
+        $error = false;
+        $errorDatum2 = 'Gelieve een datum in te geven. ';
+    }
+    if (checkDate($_POST['datum2']) == false){
+        $error = false;
+        $errorDatum2 .= 'Gelieve de datum juist in te geven d-m-j';
+    }
+    if (!$_POST['desc']){
+        $error = false;
+        $errorDesc = 'Gelieve jouw evenement te beschrijven. ';
+    }
+    if (strlen($_POST['desc']) > 200){
+        $error = false;
+        $errorDesc .= 'De beschrijving is te lang.';
+     }
+}
 
 
 echo $twig->render('pages/add-event.twig', [
-
+    'eventname' => $_POST['evenementnaam'] ?? '',
+    'locatie' => $_POST['locatie'] ?? '',
+    'ticketprijs' => $_POST['ticketprijs'] ?? '',
+    'datum1' => $_POST['datum1'] ?? '',
+    'datum2' => $_POST['datum2'] ?? '',
+    'desc' => $desc
 ]);

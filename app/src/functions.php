@@ -220,3 +220,13 @@ function searchEvents(string $term): array{
     }
     return $events;
 }
+
+function makeEvent(string $eventname, string $locatie, float $prijs, string $startdatum, string $einddatum, string $desc): void{
+    global $connection;
+    $stmt = $connection->prepare('INSERT INTO events (eventName, standaardPrijsTicket, startTime, endTime, description, locatie) VALUES (?,?,?,?,?,?)');
+    $stmt->execute([$eventname, $prijs, $startdatum, $einddatum, $desc, $locatie]);
+}
+
+function checkDate(string $date): bool{
+
+}

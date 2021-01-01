@@ -5,7 +5,7 @@ class Events
 {
     private int $id;
     private string $name;
-    private int $price;
+    private float $price;
     private string $start;
     private string $dag;
     private string $maand;
@@ -13,7 +13,7 @@ class Events
     private string $description;
     private string $location;
 
-    public function __construct(int $id, string $name, int $price, string $start, string $dag, string $maand, string $end, string $description, string $location)
+    public function __construct(int $id, string $name, float $price, string $start, string $dag, string $maand, string $end, string $description, string $location)
     {
         $this->id = $id;
         $this->name = $name;

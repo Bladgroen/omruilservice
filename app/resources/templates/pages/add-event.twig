@@ -17,22 +17,23 @@
                 <form id="eventform" method="post">
                     <h3>Evenementennaam</h3>
                     <input type="text" id="evenementnaam" name="evenementnaam" placeholder="evenementnaam"
-                           value="">
+                           value="{{ eventname }}">
                     <span></span>
                     <h3>Locatie</h3>
                     <input type="text" id="locatie" name="locatie" placeholder="Locatie"
-                           value="">
+                           value="{{ locatie }}">
                     <span></span>
                     <h3>Standaard ticket prijs</h3>
-                    <input type="number" id="ticketprijs" name="ticketprijs" min="0" max="99999999">
+                    <input type="number" id="ticketprijs" name="ticketprijs" min="0" max="99999999"
+                           value="{{ ticketprijs }}">
                     <h3>Datum</h3>
-                    <input type="text" placeholder="../../....">
+                    <input type="text" placeholder="d-m-j" name="datum1" value="{{ datum1 }}">
                     <p>tot</p>
-                    <input type="text" placeholder="../../....">
+                    <input type="text" placeholder="d-m-j" name="datum2" value="{{ datum2 }}">
                     <h3>Descriptie</h3>
-                    <textarea></textarea>
+                    <textarea id="desc" name="desc">{{ desc }}</textarea>
                     <input type="hidden" name="moduleAction" value="processName">
-                    <input type="submit" id="button" value="Verzenden">
+                    <input type="submit" id="button" value="Verzenden" name="bttnsubmit">
 
                 </form>
 

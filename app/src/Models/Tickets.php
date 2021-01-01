@@ -5,12 +5,12 @@ class Tickets
 {
     private int $id;
     private string $ticketName;
-    private int $ticketPrice;
+    private float $ticketPrice;
     private string $reason;
     private int $eventId;
     private string $soort;
 
-    public function __construct(int $id, string $ticketName, int $ticketPrice, string $reason, int $eventId, string $soort){
+    public function __construct(int $id, string $ticketName, float $ticketPrice, string $reason, int $eventId, string $soort){
         $this->id = $id;
         $this->ticketName = $ticketName;
         $this->ticketPrice = $ticketPrice;

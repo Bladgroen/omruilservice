@@ -23,7 +23,7 @@ if (isset($_GET['search'])) {
 
 
 echo $twig->render('pages/index.twig', [
-    'search' => $_GET['search'] ?? '',
+    'search' => $search,
     'events' => $event
 ]);
 

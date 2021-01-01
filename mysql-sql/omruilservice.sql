@@ -28,11 +28,11 @@ DROP TABLE IF EXISTS `events`;
 CREATE TABLE `events` (
   `eventID` int NOT NULL AUTO_INCREMENT,
   `eventName` varchar(45) DEFAULT NULL,
-  `standaardPrijsTicket` int NOT NULL,
+  `standaardPrijsTicket` float NOT NULL,
   `startTime` varchar(20) DEFAULT NULL,
   `endTime` varchar(20) DEFAULT NULL,
   `description` varchar(200) DEFAULT NULL,
-  `locatie` varchar(20) DEFAULT NULL,
+  `locatie` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`eventID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -82,7 +82,7 @@ DROP TABLE IF EXISTS `tickets`;
 CREATE TABLE `tickets` (
   `ticketID` int NOT NULL AUTO_INCREMENT,
   `ticketName` varchar(50) DEFAULT NULL,
-  `ticketPrice` int DEFAULT NULL,
+  `ticketPrice` float DEFAULT NULL,
   `reason` varchar(200) DEFAULT NULL,
   `events_eventID` int NOT NULL,
   `soort` varchar(20) DEFAULT NULL,
