@@ -31,7 +31,7 @@ if (isset($_POST['bttnsubmit'])) {
         $error = false;
         $errorNaam .= 'De naam van uw event is te lang. ';
     }
-    if (chechEventName($_POST['evenementnaam'])) {
+    if (checkEventName($_POST['evenementnaam'])) {
         $error = false;
         $errorNaam .= 'Dit event bestaal al.';
     }

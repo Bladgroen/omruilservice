@@ -111,11 +111,19 @@ form#loginform input[type=text] {
     width: 30%;
 }
 
+form#loginform input[type=password] {
+    width: 30%;
+}
+
 form#signupform input[type=text] {
     width: 30%;
 }
 
-input#submit_Zoekterm{
+form#signupform input[type=password] {
+    width: 30%;
+}
+
+input#submit_Zoekterm {
     margin-top: 20px;
 }
 

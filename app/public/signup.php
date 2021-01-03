@@ -6,7 +6,9 @@ $twig = new \Twig\Environment($loader);
 
 // General variables
 $basePath = __DIR__ . '/../';
-
+require_once $basePath . 'src/functions.php';
+require_once $basePath . 'vendor/autoload.php';
+$error = true;
 $errorGebruikersnaam = '';
 $errorEmail = '';
 $errorWachtwoord = '';
@@ -20,16 +22,37 @@ $moduleAction = isset($_POST['moduleAction']) ? (string) $_POST['moduleAction'] 
 
 if ($moduleAction == 'processName'){
     if ($gebruikersnaam == ''){
-        $errorGebruikersnaam = 'Geef een gebruikersnaam in.';
+        $errorGebruikersnaam = 'Geef een gebruikersnaam in. ';
+        $error = false;
+    }
+    if (checkUsername($gebruikersnaam)){
+        $errorGebruikersnaam .= 'Gebruikersnaam bestaat al.';
+        $error = false;
     }
     if ($email == ''){
-        $errorEmail = 'Geef een email in.';
+        $errorEmail = 'Geef een email in. ';
+        $error = false;
+    }
+    if (checkMail($email)){
+        $errorEmail = 'Deze mail is al in gebruik.';
+        $error = false;
+    }
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
+        $errorEmail = 'Geef een correct email address in.';
+        $error = false;
     }
     if ($wachtwoord == ''){
         $errorWachtwoord = 'Geef een wachtwoord in.';
+        $error = false;
     }
     if ($wachtwoord2 != $wachtwoord){
         $errorWachtwoord2 = 'Wachtwoorden komen niet overeen.';
+        $error = false;
+    }
+    if ($error){
+       $password = password_hash($_POST['wachtwoord'], PASSWORD_DEFAULT);
+        createUser($gebruikersnaam, $email, $password);
+        header('location: login.php');
     }
 }
 

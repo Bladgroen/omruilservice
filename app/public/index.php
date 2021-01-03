@@ -13,6 +13,8 @@ require_once $basePath . 'src/Models/Events.php';
 require_once $basePath . 'src/functions.php';
 
 
+
+
 $search = isset($_GET['search']) ? (string)$_GET['search'] : '';
 
 if (isset($_GET['search'])) {

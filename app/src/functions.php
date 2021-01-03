@@ -143,19 +143,21 @@ function getTicket(int $id): array
     return $collections;
 }
 
-function getUserFromTicket(int $id): array{
+function getUserFromTicket(int $id): array
+{
     global $connection;
     $stmt = $connection->prepare('SELECT sellers_sellerID FROM tickets_has_sellers WHERE tickets_ticketID = ?');
     $stmt->execute([$id]);
     $collections = $stmt->fetchAllAssociative();
     $nummer = $collections[0];
     $stmt2 = $connection->prepare('SELECT sellerName, sellerMail FROM sellers WHERE sellerID = ?');
-    $stmt2->execute([(int) $nummer]);
+    $stmt2->execute([(int)$nummer]);
     $collections2 = $stmt2->fetchAllAssociative();
     return $collections2;
 }
 
-function searchEvents(string $term): array{
+function searchEvents(string $term): array
+{
     global $connection;
     $events = [];
     $stmt = $connection->prepare("SELECT * FROM `events` WHERE `eventName` LIKE :needle");
@@ -163,7 +165,7 @@ function searchEvents(string $term): array{
     $stmt->bindValue(':needle', $needle, PDO::PARAM_STR);
     $stmt->execute();
     $collections = $stmt->fetchAllAssociative();
-    for ($i = 0; $i <= count($collections) - 1; $i++){
+    for ($i = 0; $i <= count($collections) - 1; $i++) {
         $maand = '';
         $sub = substr($collections[$i]['startTime'], 0, 2);
         $sub2 = substr($collections[$i]['startTime'], 3, 2);
@@ -221,52 +223,88 @@ function searchEvents(string $term): array{
     return $events;
 }
 
-function makeEvent(string $eventname, string $locatie, float $prijs, string $startdatum, string $einddatum, string $desc): void{
+function makeEvent(string $eventname, string $locatie, float $prijs, string $startdatum, string $einddatum, string $desc): void
+{
     global $connection;
     $stmt = $connection->prepare('INSERT INTO events (eventName, standaardPrijsTicket, startTime, endTime, description, locatie) VALUES (?,?,?,?,?,?)');
     $stmt->execute([$eventname, $prijs, $startdatum, $einddatum, $desc, $locatie]);
 }
 
-function checkDatum(string $date){
+function checkDatum(string $date)
+{
     $status = true;
 
     $sub1 = substr($date, 0, 2);
-    $sub2 = substr($date, 3,1);
+    $sub2 = substr($date, 3, 1);
     $sub3 = substr($date, 4, 1);
     $sub4 = substr($date, 3, 2);
     $sub5 = substr($date, 6, 4);
 
 
-    if ((int)$sub1 < 0 || (int)$sub1 > 31){
+    if ((int)$sub1 < 0 || (int)$sub1 > 31) {
         $status = false;
     }
-    if ((int)$sub2 < 0 || (int)$sub2 > 1){
+    if ((int)$sub2 < 0 || (int)$sub2 > 1) {
         $status = false;
     }
-    if ((int)$sub3 < 0 || (int)$sub3 > 9){
+    if ((int)$sub3 < 0 || (int)$sub3 > 9) {
         $status = false;
     }
-    if (strlen($sub5) > 4 || (int)$sub5 < 2020){
+    if (strlen($sub5) > 4 || (int)$sub5 < 2020) {
         $status = false;
     }
-    if (strlen($date) !== 0){
+    if (strlen($date) !== 0) {
         $datum = new DateTime($sub1 . '-' . $sub4 . '-' . $sub5);
         $now = new DateTime();
-        if ($datum < $now){
+        if ($datum < $now) {
             $status = false;
         }
     }
     return $status;
 }
 
-function chechEventName(string $event){
+function checkEventName(string $event)
+{
     global $connection;
     $status = false;
     $stmt = $connection->prepare('SELECT * FROM events WHERE eventName = ?');
     $stmt->execute([$event]);
     $collections = $stmt->fetchAllAssociative();
-    if ($collections){
+    if ($collections) {
         $status = true;
     }
     return $status;
+}
+
+function checkUsername(string $username)
+{
+    global $connection;
+    $status = false;
+    $stmt = $connection->prepare('SELECT * FROM sellers WHERE sellerName = ?');
+    $stmt->execute([$username]);
+    $collections = $stmt->fetchAllAssociative();
+    if ($collections) {
+        $status = true;
+    }
+    return $status;
+}
+
+function checkMail(string $usermail)
+{
+    global $connection;
+    $status = false;
+    $stmt = $connection->prepare('SELECT * FROM sellers WHERE sellerMail = ?');
+    $stmt->execute([$usermail]);
+    $collections = $stmt->fetchAllAssociative();
+    if ($collections) {
+        $status = true;
+    }
+    return $status;
+
+}
+
+function createUser(string $user, string $mail, string $password){
+    global $connection;
+    $stmt = $connection->prepare('INSERT INTO sellers (sellerName, sellerMail, sellerPassword) VALUES (?,?,?)');
+    $stmt->execute([$user, $mail, $password]);
 }
