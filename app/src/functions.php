@@ -227,6 +227,46 @@ function makeEvent(string $eventname, string $locatie, float $prijs, string $sta
     $stmt->execute([$eventname, $prijs, $startdatum, $einddatum, $desc, $locatie]);
 }
 
-function checkDate(string $date): bool{
+function checkDatum(string $date){
+    $status = true;
 
+    $sub1 = substr($date, 0, 2);
+    $sub2 = substr($date, 3,1);
+    $sub3 = substr($date, 4, 1);
+    $sub4 = substr($date, 3, 2);
+    $sub5 = substr($date, 6, 4);
+
+
+    if ((int)$sub1 < 0 || (int)$sub1 > 31){
+        $status = false;
+    }
+    if ((int)$sub2 < 0 || (int)$sub2 > 1){
+        $status = false;
+    }
+    if ((int)$sub3 < 0 || (int)$sub3 > 9){
+        $status = false;
+    }
+    if (strlen($sub5) > 4 || (int)$sub5 < 2020){
+        $status = false;
+    }
+    if (strlen($date) !== 0){
+        $datum = new DateTime($sub1 . '-' . $sub4 . '-' . $sub5);
+        $now = new DateTime();
+        if ($datum < $now){
+            $status = false;
+        }
+    }
+    return $status;
+}
+
+function chechEventName(string $event){
+    global $connection;
+    $status = false;
+    $stmt = $connection->prepare('SELECT * FROM events WHERE eventName = ?');
+    $stmt->execute([$event]);
+    $collections = $stmt->fetchAllAssociative();
+    if ($collections){
+        $status = true;
+    }
+    return $status;
 }
