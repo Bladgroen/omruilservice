@@ -308,3 +308,4 @@ function createUser(string $user, string $mail, string $password){
     $stmt = $connection->prepare('INSERT INTO sellers (sellerName, sellerMail, sellerPassword) VALUES (?,?,?)');
     $stmt->execute([$user, $mail, $password]);
 }
+

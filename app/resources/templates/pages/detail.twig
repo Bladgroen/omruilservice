@@ -40,7 +40,7 @@
                                 <ul>
                                     <h3>Dagtickets</h3>
                                     {% for dag in dagticket %}
-                                        <li><a href="/detailTicket.php?ticket={{ dag.ticketID }}">{{ dag.ticketName }}
+                                        <li><a href="/event/{{ post.eventID }}/ticket/{{ dag.ticketID }}">{{ dag.ticketName }}
                                                 | {{ dag.ticketPrice }} euro</a></li>
                                     {% endfor %}
                                 </ul>
@@ -48,7 +48,7 @@
                                     <h3>Combitickets</h3>
                                     {% for combi in combitickets %}
                                         <li>
-                                            <a href="/detailTicket.php?ticket={{ combi.ticketID }}">{{ combi.ticketName }}
+                                            <a href="/{{ combi.ticketID }}">{{ combi.ticketName }}
                                                 | {{ combi.ticketPrice }} euro </a></li>
                                     {% endfor %}
                                 </ul>

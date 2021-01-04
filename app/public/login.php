@@ -23,9 +23,3 @@ if ($moduleAction == 'processName'){
     }
 }
 
-echo $twig->render('pages/login.twig', [
-    'gebruikersnaam' => $gebruikersnaam,
-    'wachtwoord' => $wachtwoord,
-    'errorGebruikersnaam' => $errorGebruikersnaam,
-    'errorWachtwoord' => $errorWachtwoord
-]);

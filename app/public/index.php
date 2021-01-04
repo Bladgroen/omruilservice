@@ -12,21 +12,25 @@ require_once $basePath . 'vendor/autoload.php';
 require_once $basePath . 'src/Models/Events.php';
 require_once $basePath . 'src/functions.php';
 
+$router->get('/', 'AuthController@showEvents');
+$router->get('/login', 'AuthController@showLogin');
+$router->post('/login', 'AuthController@login');
+$router->get('/signup', 'AuthController@showSignup');
+$router->post('/signup', 'AuthController@signup');
+$router->get('/addEvent', 'AuthController@showAddEvent');
+$router->post('/addEvent', 'AuthController@addEvent');
+$router->get('/event/{event}/ticket/{id}', 'AuthController@Ticket');
+$router->post('/event/{event}/ticket/{id}', 'AuthController@Ticket');
+$router->get('/event/{event}', 'AuthController@showDetail');
+$router->post('/event/{event}', 'AuthController@showDetail');
+
+
+$router->run();
 
 
 
-$search = isset($_GET['search']) ? (string)$_GET['search'] : '';
-
-if (isset($_GET['search'])) {
-    $event = searchEvents($_GET['search']);
-} else {
-    $event = getEventObjects();
-}
 
 
-echo $twig->render('pages/index.twig', [
-    'search' => $search,
-    'events' => $event
-]);
+
 
 
