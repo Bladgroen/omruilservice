@@ -110,7 +110,7 @@ DROP TABLE IF EXISTS `tickets_has_sellers`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `tickets_has_sellers` (
-  `tickets_ticketID` int NOT NULL,
+  `tickets_ticketID` int NOT NULL AUTO_INCREMENT,
   `sellers_sellerID` int NOT NULL,
   PRIMARY KEY (`tickets_ticketID`,`sellers_sellerID`),
   KEY `fk_tickets_has_sellers_sellers1_idx` (`sellers_sellerID`),

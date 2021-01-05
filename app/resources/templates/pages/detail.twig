@@ -48,7 +48,7 @@
                                     <h3>Combitickets</h3>
                                     {% for combi in combitickets %}
                                         <li>
-                                            <a href="/{{ combi.ticketID }}">{{ combi.ticketName }}
+                                            <a href="/event/{{ post.eventID }}/ticket/{{ combi.ticketID }}">{{ combi.ticketName }}
                                                 | {{ combi.ticketPrice }} euro </a></li>
                                     {% endfor %}
                                 </ul>
@@ -56,7 +56,7 @@
                                     <h3>Campingtickets</h3>
                                     {% for camping in campingtickets %}
                                         <li>
-                                            <a href="/detailTicket.php?ticket={{ camping.ticketID }}">{{ camping.ticketName }}
+                                            <a href="/event/{{ post.eventID }}/ticket/{{ camping.ticketID }}">{{ camping.ticketName }}
                                                 | {{ camping.ticketPrice }} euro</a>
                                         </li>
                                     {% endfor %}
@@ -64,6 +64,7 @@
                             </div>
 
                         </article>
+                        <a href="/event/{{ post.eventID }}/addTicket">TICKET TOEVOEGEN</a>
                     {% endfor %}
 
                     <!-- Pagination -->

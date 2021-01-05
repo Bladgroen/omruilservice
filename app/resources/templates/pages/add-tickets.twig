@@ -15,13 +15,15 @@
 
                 </header>
                 <form id="Ticketform" method="post">
+                    {{ test }}
                     <h3>Ticketnaam</h3>
                     <input type="text" id="ticketnaam" name="ticketnaam" placeholder="ticketnaam"
-                           value="">
-                    <span></span>
+                           value="{{ ticketNaam }}">
+                    <span>{{ errorTicket }}</span>
                     <h3>ticketPrijs</h3>
-                    <input type="number" id="ticketprijs" min="0" max="99999999">
-                    <span></span>
+                    <input type="number" id="ticketprijs" value="{{ ticketPrijs }}" name="ticketprijs" min="0"
+                           max="99999999">
+                    <span>{{ errorPrijs }}</span>
                     <h3>Soort ticket</h3>
                     <select name="soortticket" id="soortticket">
                         <option value="dagticket">Dagticket</option>
@@ -29,9 +31,10 @@
                         <option value="camping">Campingticket</option>
                     </select>
                     <h3>Reden</h3>
-                    <textarea></textarea>
+                    <textarea name="reden">{{ reden }}</textarea>
+                    <span>{{ errorReden }}</span>
                     <input type="hidden" name="moduleAction" value="processName">
-                    <input type="submit" id="button" value="Verzenden">
+                    <input type="submit" name="bttnpress" id="button" value="Verzenden">
 
                 </form>
 

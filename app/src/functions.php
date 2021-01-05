@@ -239,27 +239,38 @@ function checkDatum(string $date)
     $sub3 = substr($date, 4, 1);
     $sub4 = substr($date, 3, 2);
     $sub5 = substr($date, 6, 4);
-
+    $error = true;
 
     if ((int)$sub1 < 0 || (int)$sub1 > 31) {
         $status = false;
+        $error= false;
+    }
+    if (strlen($date) !== 10){
+        $status = false;
+        $error = false;
     }
     if ((int)$sub2 < 0 || (int)$sub2 > 1) {
         $status = false;
+        $error = false;
     }
     if ((int)$sub3 < 0 || (int)$sub3 > 9) {
         $status = false;
+        $error = false;
     }
     if (strlen($sub5) > 4 || (int)$sub5 < 2020) {
         $status = false;
+        $error = false;
     }
-    if (strlen($date) !== 0) {
-        $datum = new DateTime($sub1 . '-' . $sub4 . '-' . $sub5);
-        $now = new DateTime();
-        if ($datum < $now) {
-            $status = false;
+    if ($error){
+        if (strlen($date) !== 0) {
+            $datum = new DateTime($sub1 . '-' . $sub4 . '-' . $sub5);
+            $now = new DateTime();
+            if ($datum < $now) {
+                $status = false;
+            }
         }
     }
+
     return $status;
 }
 
@@ -303,9 +314,12 @@ function checkMail(string $usermail)
 
 }
 
-function createUser(string $user, string $mail, string $password){
+function createUser(string $user, string $mail, string $password)
+{
     global $connection;
     $stmt = $connection->prepare('INSERT INTO sellers (sellerName, sellerMail, sellerPassword) VALUES (?,?,?)');
     $stmt->execute([$user, $mail, $password]);
 }
+
+
 

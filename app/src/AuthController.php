@@ -1,28 +1,41 @@
 <?php
 
+require_once 'DatabaseConnector.php';
 
 class AuthController
 {
     protected \Twig\Environment $twig;
+    protected \Doctrine\DBAL\Connection $db;
+
 
     public function __construct()
     {
         $loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/../resources/templates');
         $this->twig = new \Twig\Environment($loader);
+        $this->db = DatabaseConnector::getConnection();
+
     }
 
     public function showEvents()
     {
         $search = isset($_GET['search']) ? (string)$_GET['search'] : '';
-
+        $status = false;
+        $username = '';
         if (isset($_GET['search'])) {
             $event = searchEvents($_GET['search']);
         } else {
             $event = getEventObjects();
         }
+        if (isset($_SESSION['user'])) {
+            $status = true;
+            $username = $_SESSION['user'][0]['sellerName'];
+        }
+
         echo $this->twig->render('/pages/index.twig', [
             'events' => $event,
-            'search' => $search
+            'search' => $search,
+            'status' => $status,
+            'name' => $username
         ]);
     }
 
@@ -39,20 +52,44 @@ class AuthController
 
         $gebruikersnaam = isset($_POST['gebruikersnaam']) ? (string)$_POST['gebruikersnaam'] : '';
         $wachtwoord = isset($_POST['wachtwoord']) ? (string)$_POST['wachtwoord'] : '';
+        $userError = '';
         $moduleAction = isset($_POST['moduleAction']) ? $_POST['moduleAction'] : '';
-
+        $status = true;
         if ($moduleAction == 'processName') {
             if ($gebruikersnaam == '') {
                 $errorGebruikersnaam = 'Geef een gebruikersnaam in.';
+                $status = false;
             }
             if ($wachtwoord == '') {
                 $errorWachtwoord = 'Geef een wachtwoord in.';
+                $status = false;
             }
+            if ($status) {
+                $stmt = $this->db->prepare('SELECT * FROM sellers WHERE sellerName = ?');
+                $stmt->execute([$gebruikersnaam]);
+                $user = $stmt->fetchAllAssociative();
+                if (($user !== false) && (password_verify($wachtwoord, $user[0]['sellerPassword']))) {
+                    $_SESSION['user'] = $user;
+                    header('location: /');
+                    exit;
+                } else {
+                    $userError = 'Invalid login credentials';
+                    echo $this->twig->render('/pages/login.twig', ['gebruikersnaam' => $gebruikersnaam, 'wachtwoord' => $wachtwoord, 'error' => $userError]);
+                }
+            }
+
+
         }
-
-        echo $this->twig->render('/pages/login.twig', ['gebruikersnaam' => $gebruikersnaam, 'wachtwoord' => $wachtwoord]);
-
     }
+
+    public function logout()
+    {
+        session_unset();
+        session_destroy();
+        header('location: /');
+        exit;
+    }
+
 
     public function showSignup()
     {
@@ -108,7 +145,7 @@ class AuthController
             if ($error) {
                 $password = password_hash($_POST['wachtwoord'], PASSWORD_DEFAULT);
                 createUser($gebruikersnaam, $email, $password);
-                header('location: login.php');
+                header('location: /login');
             }
         }
         echo $this->twig->render('pages/signup.twig', [
@@ -161,21 +198,41 @@ class AuthController
         $stmt4 = $connection->prepare('SELECT * FROM tickets WHERE events_eventID = ? AND soort = "camping"');
         $stmt4->execute([$event]);
         $collections4 = $stmt4->fetchAllAssociative();
-
+        $status = false;
+        $name = '';
+        if (isset($_SESSION['user'])) {
+            $status = true;
+            $name = $_SESSION['user'][0]['sellerName'];
+        }
 
         echo $this->twig->render('pages/detail.twig', [
             'info' => $collections,
             'dagticket' => $collections2,
             'combitickets' => $collections3,
-            'campingtickets' => $collections4
+            'campingtickets' => $collections4,
+            'status' => $status,
+            'name' => $name
         ]);
     }
 
-    public function showAddEvent(){
-       echo $this->twig->render('pages/add-event.twig');
+    public function showAddEvent()
+    {
+        $status = false;
+        $name = '';
+        if (isset($_SESSION['user'])) {
+            $status = true;
+            $name = $_SESSION['user'][0]['sellerName'];
+            echo $this->twig->render('pages/add-event.twig', [
+                'status' => $status,
+                'name' => $name
+            ]);
+        } else {
+            header('location: /login');
+        }
     }
 
-    public function addEvent(){
+    public function addEvent()
+    {
         $basePath = __DIR__ . '/../';
 
         require_once $basePath . 'vendor/autoload.php';
@@ -252,28 +309,41 @@ class AuthController
             }
             if ($error) {
                 makeEvent($_POST['evenementnaam'], $_POST['locatie'], $_POST['ticketprijs'], $_POST['datum1'], $_POST['datum2'], $_POST['desc']);
-                header('location: index.php');
+                header('location: /');
             }
         }
-        echo $this->twig->render('pages/add-event.twig', [
-            'eventname' => $_POST['evenementnaam'] ?? '',
-            'locatie' => $_POST['locatie'] ?? '',
-            'ticketprijs' => $_POST['ticketprijs'] ?? '',
-            'datum1' => $_POST['datum1'] ?? '',
-            'datum2' => $_POST['datum2'] ?? '',
-            'desc' => $desc,
-            'errorName' => $errorNaam,
-            'errorLocatie' => $errorLocatie,
-            'errorPrijs' => $errorPrijs,
-            'errorDatum1' => $errorDatum1,
-            'errorDatum2' => $errorDatum2,
-            'errorDesc' => $errorDesc
-        ]);
+        $status = false;
+        $name = '';
+        if (isset($_SESSION['user'])) {
+            $status = true;
+            $name = $_SESSION['user'][0]['sellerName'];
+        }
+        if (isset($_SESSION['user'])) {
+            echo $this->twig->render('pages/add-event.twig', [
+                'eventname' => $_POST['evenementnaam'] ?? '',
+                'locatie' => $_POST['locatie'] ?? '',
+                'ticketprijs' => $_POST['ticketprijs'] ?? '',
+                'datum1' => $_POST['datum1'] ?? '',
+                'datum2' => $_POST['datum2'] ?? '',
+                'desc' => $desc,
+                'errorName' => $errorNaam,
+                'errorLocatie' => $errorLocatie,
+                'errorPrijs' => $errorPrijs,
+                'errorDatum1' => $errorDatum1,
+                'errorDatum2' => $errorDatum2,
+                'errorDesc' => $errorDesc,
+                'status' => $status,
+                'name' => $name
+            ]);
+        } else {
+            header('location: /login');
+            exit;
+        }
     }
 
 
-
-    public function ticket($event, $id){
+    public function ticket($event, $id)
+    {
         $basePath = __DIR__ . '/../';
 
         require_once $basePath . 'vendor/autoload.php';
@@ -283,12 +353,98 @@ class AuthController
         $ticket2 = getTicket($id);
         $user = getUserFromTicket($id);
 
+        $status = false;
+        $name = '';
+        if (isset($_SESSION['user'])) {
+            $status = true;
+            $name = $_SESSION['user'][0]['sellerName'];
+            echo $this->twig->render('pages/detailTicket.twig', [
+                'ticket' => $ticket2,
+                'user' => $user,
+                'status' => $status,
+                'name' => $name
+            ]);
+        } else {
+            header('location: /login');
+        }
+    }
 
+    public function showAddTicket()
+    {
+        if (isset($_SESSION['user'])) {
+            echo $this->twig->render('pages/add-tickets.twig');
+        } else {
+            header('location: /login');
+        }
+    }
 
-        echo $this->twig->render('pages/detailTicket.twig', [
-            'ticket' => $ticket2,
-            'user' => $user
-        ]);
+    public function AddTicket($event)
+    {
+        $basePath = __DIR__ . '/../';
+
+        require_once $basePath . 'vendor/autoload.php';
+        require_once $basePath . 'src/Models/Events.php';
+        require_once $basePath . 'src/functions.php';
+        require_once $basePath . 'src/Models/Tickets.php';
+        $ticketNaam = isset($_POST['ticketnaam']) ? (string)$_POST['ticketnaam'] : '';
+        $ticketPrijs = isset($_POST['ticketprijs']) ? $_POST['ticketprijs'] : '';
+        $soort = isset($_POST['soortticket']) ? $_POST['soortticket'] : '';
+        $reden = isset($_POST['reden']) ? $_POST['reden'] : '';
+
+        $error = true;
+        $errorTicket = '';
+        $errorPrijs = '';
+        $errorReden = '';
+
+        if (isset($_POST['bttnpress'])) {
+            if (!$ticketNaam) {
+                $error = false;
+                $errorTicket = 'Gelieve een naam in te vullen. ';
+            }
+            if (strlen($ticketNaam) > 50) {
+                $error = false;
+                $errorTicket .= 'Naam is te lang.';
+            }
+            if (!$ticketPrijs) {
+                $error = false;
+                $errorPrijs = 'Gelieve een prijs in te vullen. ';
+            }
+            if ($ticketPrijs < 0) {
+                $error = false;
+                $errorPrijs .= 'Een prijs kan niet negatief zijn.';
+            }
+
+            if (!$reden) {
+                $error = false;
+                $errorReden = 'Gelieve een reden in te vullen. ';
+            }
+            if (strlen($reden) > 200) {
+                $error = false;
+                $errorReden .= 'Reden mag maar 200 karakters lang zijn.';
+            }
+            if ($error) {
+                $stmt = $this->db->prepare('INSERT INTO tickets (ticketName, ticketPrice, reason, events_eventID, soort) VALUES (?,?,?,?,?)');
+                $stmt->execute([$ticketNaam, $ticketPrijs, $reden, $event, $soort]);
+
+                $stmt2 = $this->db->prepare('INSERT INTO tickets_has_sellers (sellers_sellerID) VALUES (?)');
+                $stmt2->execute([$_SESSION['user'][0]['sellerID']]);
+                header('location: /');
+            }
+        }
+        if (isset($_SESSION['user'])) {
+            echo $this->twig->render('pages/add-tickets.twig', [
+                'ticketNaam' => $ticketNaam,
+                'ticketPrijs' => $ticketPrijs,
+                'reden' => $reden,
+                'errorTicket' => $errorTicket,
+                'errorPrijs' => $errorPrijs,
+                'errorReden' => $errorReden,
+                'test' => $soort
+            ]);
+        } else {
+            header('location: /login');
+        }
+
     }
 
 

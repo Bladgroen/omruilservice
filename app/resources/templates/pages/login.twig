@@ -1,4 +1,7 @@
 {% extends 'layout/app.twig' %}
+{% block css %}
+    <link rel="stylesheet" href="../css/main.css"/>
+{% endblock %}
 {% block pageContent %}
     <div id="content">
         <div class="inner">
@@ -15,6 +18,7 @@
 
                 </header>
                 <form id="loginform" method="post">
+                    <span>{{ error }}</span>
                     <h3>Gebruikersnaam</h3>
                     <input type="text" id="gebruikersnaam" name="gebruikersnaam" placeholder="Gebruikersnaam"
                            value="{{ gebruikersnaam }}">
