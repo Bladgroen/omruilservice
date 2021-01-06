@@ -180,22 +180,22 @@ class AuthController
         $result = $connection->connect();
 
 //query for event
-        $stmt = $connection->prepare('SELECT * FROM events WHERE eventID = ?');
+        $stmt = $this->db->prepare('SELECT * FROM events WHERE eventID = ?');
         $stmt->execute([$event]);
         $collections = $stmt->fetchAllAssociative();
 
 //query for daytickets
-        $stmt2 = $connection->prepare('SELECT * FROM tickets WHERE events_eventID = ? AND soort = "dagticket"');
+        $stmt2 = $this->db->prepare('SELECT * FROM tickets WHERE events_eventID = ? AND soort = "dagticket"');
         $stmt2->execute([$event]);
         $collections2 = $stmt2->fetchAllAssociative();
 
 //query for combitickets
-        $stmt3 = $connection->prepare('SELECT * FROM tickets WHERE events_eventID = ? AND soort = "combiticket"');
+        $stmt3 = $this->db->prepare('SELECT * FROM tickets WHERE events_eventID = ? AND soort = "combiticket"');
         $stmt3->execute([$event]);
         $collections3 = $stmt3->fetchAllAssociative();
 
 //query for camping
-        $stmt4 = $connection->prepare('SELECT * FROM tickets WHERE events_eventID = ? AND soort = "camping"');
+        $stmt4 = $this->db->prepare('SELECT * FROM tickets WHERE events_eventID = ? AND soort = "camping"');
         $stmt4->execute([$event]);
         $collections4 = $stmt4->fetchAllAssociative();
         $status = false;
@@ -451,7 +451,6 @@ class AuthController
             $stmt = $this->db->prepare('DELETE FROM tickets WHERE ticketID = ?');
             $stmt->execute([$id]);
             header('location: /');
-
     }
 
 }
