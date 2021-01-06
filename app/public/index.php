@@ -26,6 +26,8 @@ $router->get('/test', 'AuthController@test');
 $router->post('/test', 'AuthController@test');
 $router->get('/event/{event}/ticket/{id}', 'AuthController@Ticket');
 $router->post('/event/{event}/ticket/{id}', 'AuthController@Ticket');
+$router->get('/{id}/sell', 'AuthController@sell');
+$router->post('{id}/sell', 'AuthController@sell');
 $router->get('/event/{event}/addTicket', 'AuthController@AddTicket');
 $router->post('/event/{event}/addTicket', 'AuthController@AddTicket');
 $router->get('/event/{event}', 'AuthController@showDetail');

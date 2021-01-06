@@ -34,7 +34,7 @@
 
                                 <p>{{post.ticketPrice}} EURO</p>
                                 <p>{{post.reason}}</p>
-                                <input type="submit" value="Kopen">
+                                <a href="/{{ post.ticketID }}/sell"><input type="submit" name="verkoop" value="Kopen"></a>
                             {% endfor %}
 
                         </article>

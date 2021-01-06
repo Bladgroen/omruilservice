@@ -364,6 +364,7 @@ class AuthController
                 'status' => $status,
                 'name' => $name
             ]);
+
         } else {
             header('location: /login');
         }
@@ -438,14 +439,20 @@ class AuthController
                 'errorReden' => $errorReden,
                 'test' => $soort
             ]);
+
         } else {
             header('location: /login');
         }
 
+
     }
 
+    public function sell( $id){
+            $stmt = $this->db->prepare('DELETE FROM tickets WHERE ticketID = ?');
+            $stmt->execute([$id]);
+            header('location: /');
 
-
+    }
 
 }
 
