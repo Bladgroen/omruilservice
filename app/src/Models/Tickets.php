@@ -9,14 +9,16 @@ class Tickets
     private string $reason;
     private int $eventId;
     private string $soort;
+    private int $sellerID;
 
-    public function __construct(int $id, string $ticketName, float $ticketPrice, string $reason, int $eventId, string $soort){
+    public function __construct(int $id, string $ticketName, float $ticketPrice, string $reason, int $eventId, string $soort, int $sellerID){
         $this->id = $id;
         $this->ticketName = $ticketName;
         $this->ticketPrice = $ticketPrice;
         $this->reason = $reason;
         $this->eventId = $eventId;
         $this->soort = $soort;
+        $this->sellerID = $sellerID;
     }
 
     /**
@@ -113,6 +115,14 @@ class Tickets
     public function setSoort(string $soort): void
     {
         $this->soort = $soort;
+    }
+
+    public function getSellerID(){
+        return $this->sellerID;
+    }
+
+    public function setSellerID(int $sellerID): void{
+        $this->sellerID = $sellerID;
     }
 
     public function __toString(): string{

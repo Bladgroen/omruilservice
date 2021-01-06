@@ -15,12 +15,12 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Table structure for table `events`
---
 
 CREATE DATABASE IF NOT EXISTS `omruilservice` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE `omruilservice`;
+--
+-- Table structure for table `events`
+--
 
 DROP TABLE IF EXISTS `events`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -43,7 +43,6 @@ CREATE TABLE `events` (
 
 LOCK TABLES `events` WRITE;
 /*!40000 ALTER TABLE `events` DISABLE KEYS */;
-INSERT INTO `events` VALUES (1,'Tomorrowland',200,'25-07-2020','26-07-2020','Een festival in Boom','Boom');
 /*!40000 ALTER TABLE `events` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -86,9 +85,12 @@ CREATE TABLE `tickets` (
   `reason` varchar(200) DEFAULT NULL,
   `events_eventID` int NOT NULL,
   `soort` varchar(20) DEFAULT NULL,
+  `sellers_sellerID` int NOT NULL,
   PRIMARY KEY (`ticketID`),
   KEY `fk_tickets_events1_idx` (`events_eventID`),
-  CONSTRAINT `fk_tickets_events1` FOREIGN KEY (`events_eventID`) REFERENCES `events` (`eventID`)
+  KEY `fk_tickets_sellers1_idx` (`sellers_sellerID`),
+  CONSTRAINT `fk_tickets_events1` FOREIGN KEY (`events_eventID`) REFERENCES `events` (`eventID`),
+  CONSTRAINT `fk_tickets_sellers1` FOREIGN KEY (`sellers_sellerID`) REFERENCES `sellers` (`sellerID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -98,35 +100,7 @@ CREATE TABLE `tickets` (
 
 LOCK TABLES `tickets` WRITE;
 /*!40000 ALTER TABLE `tickets` DISABLE KEYS */;
-INSERT INTO `tickets` VALUES (1,'dagticket Tomorrowland',200,'Corona',1,'dagticket'),(3,'combiticket Tomorrowland',250,'Corona',1,'combiticket'),(4,'campingticket Tomorrowland',250,'Corona',1,'camping');
 /*!40000 ALTER TABLE `tickets` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `tickets_has_sellers`
---
-
-DROP TABLE IF EXISTS `tickets_has_sellers`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `tickets_has_sellers` (
-  `tickets_ticketID` int NOT NULL AUTO_INCREMENT,
-  `sellers_sellerID` int NOT NULL,
-  PRIMARY KEY (`tickets_ticketID`,`sellers_sellerID`),
-  KEY `fk_tickets_has_sellers_sellers1_idx` (`sellers_sellerID`),
-  KEY `fk_tickets_has_sellers_tickets1_idx` (`tickets_ticketID`),
-  CONSTRAINT `fk_tickets_has_sellers_sellers1` FOREIGN KEY (`sellers_sellerID`) REFERENCES `sellers` (`sellerID`),
-  CONSTRAINT `fk_tickets_has_sellers_tickets1` FOREIGN KEY (`tickets_ticketID`) REFERENCES `tickets` (`ticketID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `tickets_has_sellers`
---
-
-LOCK TABLES `tickets_has_sellers` WRITE;
-/*!40000 ALTER TABLE `tickets_has_sellers` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tickets_has_sellers` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -138,4 +112,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-29 17:11:12
+-- Dump completed on 2021-01-06  9:50:44

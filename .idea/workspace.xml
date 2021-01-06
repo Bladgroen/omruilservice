@@ -20,15 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51a4b540-9d8f-4f60-80f0-fb1a5905826b" name="Default Changelist" comment="evenementen komen uit de databank">
-      <change afterPath="$PROJECT_DIR$/app/src/DatabaseConnector.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/templates/layout/app.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/templates/layout/app.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/templates/layout/parts/sidebar.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/templates/layout/parts/sidebar.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/templates/pages/add-tickets.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/templates/pages/add-tickets.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/templates/pages/detail.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/templates/pages/detail.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/templates/pages/login.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/templates/pages/login.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Models/Tickets.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Models/Tickets.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysql-sql/omruilservice.sql" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-sql/omruilservice.sql" afterDir="false" />
     </list>
@@ -108,7 +102,8 @@
       <workItem from="1609757325044" duration="2452000" />
       <workItem from="1609772949076" duration="2062000" />
       <workItem from="1609783097619" duration="11879000" />
-      <workItem from="1609845225375" duration="24400000" />
+      <workItem from="1609845225375" duration="25324000" />
+      <workItem from="1609921784812" duration="2549000" />
     </task>
     <task id="LOCAL-00001" summary="nieuwe structuur en toevoegen van docker">
       <created>1604671051169</created>
@@ -243,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609798245034</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="login met session">
+      <created>1609889418196</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1609889418196</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,7 +280,8 @@
     <MESSAGE value="event kan aangemaakt worden" />
     <MESSAGE value="user kan aangemaakt worden in het signup form" />
     <MESSAGE value="bramus router toegevoegd" />
-    <option name="LAST_COMMIT_MESSAGE" value="bramus router toegevoegd" />
+    <MESSAGE value="login met session" />
+    <option name="LAST_COMMIT_MESSAGE" value="login met session" />
   </component>
   <component name="WindowStateProjectService">
     <state x="554" y="120" key="#com.intellij.ide.util.MemberChooser" timestamp="1609421043466">
@@ -300,11 +303,11 @@
     </state>
     <state x="635" y="348" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1609415208262" />
     <state x="794" y="439" key="NewPhpFileDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1609346678893" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1609798247211">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1609889420300">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="442" y="197" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1609506989976" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1609798247211" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1609889420300" />
     <state x="-1928" y="-8" width="1403" height="1022" maximized="true" key="dock-window-1" timestamp="1605012370228">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>

@@ -423,11 +423,8 @@ class AuthController
                 $errorReden .= 'Reden mag maar 200 karakters lang zijn.';
             }
             if ($error) {
-                $stmt = $this->db->prepare('INSERT INTO tickets (ticketName, ticketPrice, reason, events_eventID, soort) VALUES (?,?,?,?,?)');
-                $stmt->execute([$ticketNaam, $ticketPrijs, $reden, $event, $soort]);
-
-                $stmt2 = $this->db->prepare('INSERT INTO tickets_has_sellers (sellers_sellerID) VALUES (?)');
-                $stmt2->execute([$_SESSION['user'][0]['sellerID']]);
+                $stmt = $this->db->prepare('INSERT INTO tickets (ticketName, ticketPrice, reason, events_eventID, soort, sellers_sellerID) VALUES (?,?,?,?,?,?)');
+                $stmt->execute([$ticketNaam, $ticketPrijs, $reden, $event, $soort, $_SESSION['user'][0]['sellerID']]);
                 header('location: /');
             }
         }
@@ -446,6 +443,8 @@ class AuthController
         }
 
     }
+
+
 
 
 }

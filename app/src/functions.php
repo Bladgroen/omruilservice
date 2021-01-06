@@ -138,7 +138,8 @@ function getTicket(int $id): array
         $collections[0]['ticketPrice'],
         $collections[0]['reason'],
         $collections[0]['events_eventID'],
-        $collections[0]['soort']
+        $collections[0]['soort'],
+        $collections[0]['sellers_sellerID']
     );
     return $collections;
 }
@@ -146,7 +147,7 @@ function getTicket(int $id): array
 function getUserFromTicket(int $id): array
 {
     global $connection;
-    $stmt = $connection->prepare('SELECT sellers_sellerID FROM tickets_has_sellers WHERE tickets_ticketID = ?');
+    $stmt = $connection->prepare('SELECT sellers_sellerID FROM tickets WHERE ticketID = ?');
     $stmt->execute([$id]);
     $collections = $stmt->fetchAllAssociative();
     $nummer = $collections[0];
